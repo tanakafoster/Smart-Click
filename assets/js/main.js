@@ -12,11 +12,18 @@
   var header = document.querySelector(".site-header");
   var toggle = document.querySelector(".menu-toggle");
   if (toggle && header) {
+    // Fit the open menu to the screen below the header (the top bar can push it past the bottom edge)
+    var links = header.querySelector(".nav-links");
+    var fitMenu = function () {
+      if (links && header.classList.contains("nav-open")) links.style.maxHeight = (window.innerHeight - header.getBoundingClientRect().bottom) + "px";
+    };
     toggle.addEventListener("click", function () {
       var open = header.classList.toggle("nav-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      fitMenu();
     });
+    window.addEventListener("resize", fitMenu);
   }
   // Dropdowns open on first tap on small screens
   document.querySelectorAll(".has-mega > a").forEach(function (link) {

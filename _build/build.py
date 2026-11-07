@@ -342,7 +342,7 @@ def page(path, title, description, body, active="", schemas=None, root=None, ind
 </html>
 """, title=esc(full_title), desc=esc(description), canonical=canonical, brand=C.BRAND, site=C.SITE_URL,
              robots="" if index else '<meta name="robots" content="noindex">\n', ga=ga, ld=ld,
-             header=header(active), body=body, footer=footer())
+             header=header(active), body=body.replace(C.PHONE_LOCAL, C.PHONE_LOCAL.replace(" ", "&nbsp;")), footer=footer())
     html = html.replace("{r}", root)
     out = os.path.join(ROOT, path)
     os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -977,7 +977,7 @@ def build_location(l):
     body += T("""
 <section class="section"><div class="container split" style="align-items:start">
   <div class="reveal"><span class="eyebrow">Local market</span><h2>Marketing in {{city}}</h2>{{context}}</div>
-  <div class="panel reveal"><h3>How we work with {{city}} businesses</h3>
+  <div class="panel panel-sticky reveal"><h3>How we work with {{city}} businesses</h3>
     <ul class="checklist">
       <li>Strategy sessions and reviews on video call, phone or WhatsApp</li>
       <li>Campaigns targeted to {{city}} and the surrounding area</li>
