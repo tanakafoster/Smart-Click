@@ -8,8 +8,13 @@ PHONE_TEL = "+263771269979"
 WA_NUMBER = "263771269979"
 CITY = "Harare"
 COUNTRY = "Zimbabwe"
-# Set this to the live domain before launch; it is used for canonical URLs and sitemap.xml.
-SITE_URL = "https://www.smartclickmedia.co.zw"
+EMAIL = "info@smartclick.co.zw"
+HOURS = "Open 24/7"
+HOURS_LONG = "Open 24 hours a day, 7 days a week"
+# Live domain: used for canonical URLs, structured data and sitemap.xml.
+SITE_URL = "https://smartclick.co.zw"
+# Google Analytics 4 measurement ID (looks like "G-XXXXXXXXXX"). Leave empty to switch tracking off.
+GA_MEASUREMENT_ID = ""
 
 CITIES = ["Harare", "Bulawayo", "Chitungwiza", "Mutare", "Gweru", "Kwekwe", "Kadoma", "Masvingo",
           "Chinhoyi", "Marondera", "Bindura", "Victoria Falls", "Hwange", "Kariba", "Beitbridge",
@@ -40,7 +45,7 @@ SERVICES = [
         "included": [
             ("Growth strategy & market research", "We study your customers, competitors and margins, then set realistic targets for leads, sales and cost per customer."),
             ("Channel planning", "Search, social, paid ads, email, WhatsApp and your website, each with a clear job in the customer journey."),
-            ("Funnels & offers", "Landing pages, lead magnets and offers that give people a reason to act now rather than \"someday\"."),
+            ("Funnels & offers", "Landing pages, lead magnets and offers that make it easy to say yes today instead of \"maybe later\"."),
             ("Creative & copy", "Ad creative, video scripts and copy written for Zimbabwean audiences, in English, Shona or Ndebele where it helps."),
             ("Tracking & attribution", "Every enquiry, call and WhatsApp click is tagged, so we know exactly what's working."),
             ("Monthly growth reviews", "A plain-language report and a call with the person running your account, not a junior."),
@@ -52,8 +57,8 @@ SERVICES = [
             ("Grow", "We test, cut what doesn't work and put more behind what does, every single week."),
         ],
         "faqs": [
-            ("How much should I spend on digital marketing in Zimbabwe?", "It depends on your goals and industry. Many local SMEs start with a modest monthly ad budget plus our management fee, then scale once the numbers prove out. We'll recommend a budget in your free strategy session and explain exactly where every dollar goes."),
-            ("Do you work with businesses outside Harare?", "Yes. We're based in Harare but work with clients in Bulawayo, Mutare, Gweru, Masvingo, Victoria Falls and every other province. Most of our work happens online, on WhatsApp and on video calls."),
+            ("What budget do I need for digital marketing in Zimbabwe?", "It depends on your goals and industry. Many local SMEs start with a modest monthly ad budget plus our management fee, then scale once the numbers prove out. We'll recommend a budget in your free strategy session and explain exactly where every dollar goes."),
+            ("We're not in Harare. Can you still help us?", "Yes. Our team is in Harare, and we work with businesses in Bulawayo, Mutare, Gweru, Masvingo, Victoria Falls and every other province. Most of the work happens online, on WhatsApp and on video calls."),
             ("How soon will I see results?", "Paid ads can bring enquiries within days of launch. SEO and content build over months. Your plan will combine quick wins with long-term growth so you're not waiting a year for a return."),
             ("Can I pay in USD or ZiG?", "We quote in USD and can discuss local payment options when we put your proposal together."),
         ],
@@ -67,7 +72,7 @@ SERVICES = [
         "short": "Fast, mobile-first websites that load on any network in Zimbabwe and are built to win enquiries.",
         "title": "Website Design & Development in Harare, Zimbabwe",
         "h1": "Websites built to <span class=\"hl\">sell</span>, not just sit there looking pretty",
-        "intro": "Most Zimbabweans browse on a phone, often on mobile data. Your website has to load fast, read clearly on a small screen and make it dead simple to call, WhatsApp or buy. That's what we design and build.",
+        "intro": "In Zimbabwe, most of your visitors will arrive on a smartphone, and many will be paying for every megabyte. Your website has to load quickly, read clearly on a small screen and make calling, messaging on WhatsApp or buying effortless. That's what we design and build.",
         "problems": [
             "Your site takes forever to load on mobile data, so visitors give up.",
             "It looks fine but nobody ever fills in the contact form.",
@@ -89,7 +94,7 @@ SERVICES = [
             ("Launch & support", "We go live, submit to Google and stay on hand for updates and fixes."),
         ],
         "faqs": [
-            ("How long does a website take?", "A typical business website takes 3 to 6 weeks from brief to launch. Larger e-commerce or custom builds take longer, and we'll give you a clear timeline up front."),
+            ("How long does a website take?", "A typical business website takes 3 to 6 weeks from brief to launch. Larger e-commerce or custom builds take longer, and you'll get a timeline before we start."),
             ("Will I own my website?", "Yes. You own the domain, the content and the site itself. We'll make sure all logins are in your name."),
             ("Can you redesign my existing site without losing my Google rankings?", "Yes. We plan redirects and keep your best-performing pages intact, so a redesign doesn't wipe out the traffic you've already earned."),
             ("Do you offer hosting?", "Yes, see our hosting and maintenance service. We can host, back up and look after your site so you don't have to."),
@@ -126,86 +131,123 @@ SERVICES = [
             ("Measure & refine", "We track rankings and leads, and double down on what moves the needle."),
         ],
         "faqs": [
-            ("How long does SEO take to work?", "You'll usually see early movement in 2 to 3 months, with strong results building over 6 to 12 months. Anyone promising page one in a week is not being honest with you."),
+            ("How soon will SEO show results?", "You'll usually see early movement in 2 to 3 months, with strong results building over 6 to 12 months. Anyone promising page one in a week is not being honest with you."),
             ("Do you guarantee number one rankings?", "No one can honestly guarantee a ranking, because Google controls the results. What we do guarantee is transparent work, clear reporting and a strategy built on what actually moves rankings."),
-            ("What's the difference between SEO and AEO?", "SEO gets you ranked on Google. AEO gets you recommended by AI tools like ChatGPT, Gemini and Google AI Overviews. Good AEO is built on top of good SEO, so we usually do both together."),
+            ("Do I need SEO or AEO?", "Most businesses benefit from both. SEO helps you rank in Google's results, while AEO helps AI assistants such as ChatGPT, Gemini and Google's AI Overviews mention you. AI tools rely heavily on well-optimised, trusted websites, so the two support each other and we usually run them together."),
             ("Can you do SEO for a specific city like Bulawayo or Mutare?", "Yes. Local SEO targets customers in specific towns and suburbs, and it's one of the best-value things a local business can invest in."),
         ],
         "related": ["aeo", "local-seo", "content-marketing"],
-    },
-    {
-        "slug": "paid-ads",
-        "name": "Paid Ads",
-        "icon": "zap",
-        "core": True,
-        "short": "Google, Meta, TikTok, YouTube and LinkedIn ads managed for profit, not vanity clicks.",
-        "title": "Google Ads & Facebook Ads Agency in Harare, Zimbabwe",
-        "h1": "Paid ads judged on <span class=\"hl\">profit</span>, not clicks and impressions",
-        "intro": "Running ads is easy. Running ads that make money is not. We manage Google Ads, Meta (Facebook and Instagram), TikTok, YouTube and LinkedIn campaigns for Zimbabwean businesses, and we measure every one of them against the sales and leads it brings in.",
-        "problems": [
-            "You're spending money on ads but can't see what you're getting back.",
-            "Boosted posts get likes, but not customers.",
-            "Your cost per lead climbs every month and nobody can explain why.",
-            "Most of your budget goes on people who were never going to buy.",
-        ],
-        "included": [
-            ("Google Search & Shopping Ads", "Show up the moment someone searches for what you sell, with tight keyword lists and negative keywords that cut waste."),
-            ("Meta Ads (Facebook & Instagram)", "Lead generation, WhatsApp click-to-chat and sales campaigns with creative built to stop the scroll."),
-            ("TikTok & YouTube Ads", "Short-form video campaigns that reach younger audiences across Zimbabwe and the diaspora."),
-            ("LinkedIn Ads", "Reach decision-makers at companies, NGOs and government for B2B services."),
-            ("Retargeting & remarketing", "Follow up with people who visited your site or messaged you but didn't buy yet."),
-            ("Conversion tracking", "Calls, forms, WhatsApp chats and sales tracked properly, so you know your true cost per customer."),
-        ],
-        "steps": [
-            ("Account audit", "We review your current ads (or market, if you're new) and find the leaks."),
-            ("Build", "Campaign structure, audiences, creative and tracking set up properly from scratch."),
-            ("Launch", "Ads can be live within days, not months."),
-            ("Optimise weekly", "Bids, audiences, keywords and creative improved every week against your profit targets."),
-        ],
-        "faqs": [
-            ("What budget do I need for Google or Facebook ads in Zimbabwe?", "You can start small and still learn a lot. We'll recommend a test budget based on your industry and goals, then scale what works. Your ad spend is paid directly to the platform, separate from our fee."),
-            ("Can ads send people straight to WhatsApp?", "Yes. Click-to-WhatsApp ads are one of the most effective formats in Zimbabwe, and we set them up with tracking so we can measure the chats they produce."),
-            ("Can you target the diaspora?", "Absolutely. We regularly run campaigns aimed at Zimbabweans in South Africa, the UK, the US and Australia, for things like property, school fees, groceries and remittance-linked services."),
-            ("Do you lock me into a long contract?", "No. We earn your business every month. You can see everything in your own ad accounts, and they stay yours."),
-        ],
-        "related": ["digital-marketing", "cro", "analytics"],
     },
     {
         "slug": "aeo",
         "name": "AEO (AI Search Optimisation)",
         "icon": "sparkles",
         "core": True,
-        "short": "Get your brand recommended by ChatGPT, Gemini, Perplexity and Google AI Overviews.",
-        "title": "AEO Agency in Zimbabwe | Answer Engine & AI Search Optimisation",
-        "h1": "When people ask AI for a recommendation, make sure <span class=\"hl\">it names you</span>",
-        "intro": "More and more buyers skip the search results and simply ask ChatGPT, Gemini, Copilot or Google's AI Overviews. They get one or two names and act on them. Answer Engine Optimisation (AEO), sometimes called GEO, is how we make sure your business is one of those names.",
+        "short": "Get your business named when people ask ChatGPT, Gemini, Copilot, Perplexity or Google's AI for a recommendation.",
+        "title": "AEO Agency in Zimbabwe | ChatGPT & AI Search Optimisation",
+        "h1": "Be the business AI assistants <span class=\"hl\">recommend</span>",
+        "intro": "More and more people ask ChatGPT, Gemini, Microsoft Copilot, Perplexity or Google's AI answers to suggest a supplier, instead of scrolling through search results. Answer Engine Optimisation (AEO) is the work of making sure those answers mention your business, describe it correctly and send people your way.",
         "problems": [
-            "You ask ChatGPT for the best company in your industry in Zimbabwe, and your competitor comes up instead.",
-            "AI tools describe your business wrongly, or don't know you exist.",
-            "Your website content is vague, so AI can't lift a clear answer from it.",
-            "You're mentioned in very few places online, so AI has no reason to trust you.",
+            "You ask an AI assistant for the best options in your industry in Zimbabwe, and your business isn't mentioned.",
+            "AI tools get your details wrong: an old phone number, the wrong town or services you don't offer.",
+            "Your website is full of slogans, so there's nothing clear for an AI to quote.",
+            "Very little is written about your business on other websites, so AI has little to go on.",
         ],
         "included": [
-            ("AI visibility audit", "We test how ChatGPT, Gemini, Perplexity, Copilot and Google AI Overviews currently talk about you and your competitors."),
-            ("Prompt & share-of-voice tracking", "We track the real questions your buyers ask AI and how often you're recommended."),
-            ("Entity optimisation", "Your name, services, location and credentials stated consistently everywhere, so AI understands exactly who you are."),
-            ("Answer-first content", "Pages written so AI tools can quote a clear, direct answer straight off your site."),
-            ("FAQ & structured data", "Schema markup and FAQ content that machines read easily."),
-            ("Mentions & digital PR", "Getting you talked about on trusted Zimbabwean and African sites, directories, forums and media that AI tools learn from."),
+            ("Consistent business facts", "Your name, services, locations, hours and contact details made identical across your website, Google Business Profile, directories and social profiles."),
+            ("Reputation beyond your website", "Reviews, directory listings, local media coverage and industry mentions that show AI tools your business can be trusted."),
+            ("Pages built around questions", "Clear question-and-answer content, comparison pages and how-to guides that give AI something accurate to cite."),
+            ("Technical readiness", "Fast pages, accurate schema markup and robots.txt settings that let AI search crawlers in, plus an optional llms.txt summary."),
+            ("Monthly AI answer checks", "Every month we put the same set of real buyer questions to ChatGPT, Gemini, Copilot, Perplexity and Google's AI answers, and record who gets named."),
+            ("AI traffic reporting", "Visits from ChatGPT, Gemini, Perplexity and Copilot tracked in Google Analytics, alongside how often you're recommended."),
         ],
         "steps": [
-            ("Benchmark", "We measure where you stand in AI answers today, prompt by prompt."),
-            ("Fix the foundations", "Technical access, structured data and solid SEO, the base that AEO stands on."),
-            ("Build signals", "Answer-first content, consistent entity data and quality mentions."),
-            ("Track & expand", "We monitor share of voice in AI answers and widen your coverage."),
+            ("Ask the questions", "We find the questions your customers put to AI assistants and test them across the main tools."),
+            ("Fix the facts", "We correct and align your business information everywhere it appears online."),
+            ("Earn the mentions", "Helpful content, reviews and coverage give AI good reasons to recommend you."),
+            ("Re-check monthly", "We test the same questions every month and report what has changed."),
         ],
         "faqs": [
-            ("What is AEO?", "AEO stands for Answer Engine Optimisation. It's the work of making your business show up, and be recommended, in answers from AI tools like ChatGPT, Gemini, Perplexity, Copilot and Google AI Overviews."),
-            ("Is AEO the same as SEO?", "No, but they're closely linked. SEO earns rankings on Google. AEO earns recommendations from AI. AEO relies on the same foundations as good SEO, a crawlable site, quality content and authority, so the two work best together."),
-            ("Is AEO relevant in Zimbabwe yet?", "Yes. Zimbabwean professionals, students and business buyers are already using AI assistants daily. Getting in early, while few local competitors are doing it, is a real advantage."),
-            ("How do you measure AEO results?", "We track a set of real prompts your customers ask, record which brands AI recommends, and report your share of voice over time, alongside traffic and leads from AI sources."),
+            ("What is AEO?", "AEO stands for Answer Engine Optimisation. It means improving how AI assistants such as ChatGPT, Gemini, Microsoft Copilot, Perplexity and Google's AI Overviews describe and recommend your business."),
+            ("How is AEO different from SEO?", "SEO is about ranking in search results. AEO is about being named, and described correctly, in AI-generated answers. The two overlap a lot: AI tools lean on websites that are easy to crawl, well organised and widely trusted, so strong SEO makes AEO much easier. We usually run them together."),
+            ("Do people in Zimbabwe really use AI assistants?", "Yes. Students, professionals and business buyers increasingly use them, and few Zimbabwean businesses are working on AEO yet, so there's a real chance to get ahead of your competitors."),
+            ("Can you guarantee ChatGPT will recommend us?", "No one can. AI answers change, and no agency controls them. What we can do is make your business easy for AI to understand and trust, and show you each month how often you're being mentioned."),
         ],
         "related": ["seo", "content-marketing", "local-seo"],
+    },
+    {
+        "slug": "paid-ads",
+        "name": "Paid Ads",
+        "icon": "zap",
+        "core": True,
+        "short": "Google, YouTube, Meta, WhatsApp, TikTok, LinkedIn, Microsoft and ChatGPT ads, planned and managed by one team and judged on the customers they bring in.",
+        "title": "Paid Ads Agency in Harare | Google, Meta, LinkedIn & ChatGPT",
+        "h1": "Advertising on the platforms your customers use, <span class=\"hl\">managed as one plan</span>",
+        "intro": "From Google search and YouTube to Facebook, Instagram, WhatsApp, LinkedIn, Microsoft Bing, TikTok and the new ad placements in AI assistants such as ChatGPT, we plan, build and manage paid campaigns for Zimbabwean businesses and for brands reaching Zimbabweans abroad. Platforms differ in the countries they serve, so we confirm what is open to your business and your target markets before you spend, then track every campaign through to enquiries and sales.",
+        "problems": [
+            "Your ad money is spread across several platforms and nobody can say which one pays for itself.",
+            "Boosting posts brings likes and comments, but very few enquiries.",
+            "Your cost per enquiry keeps rising and the reports don't explain why.",
+            "Your ads reach plenty of people, but rarely the ones who are ready to buy.",
+        ],
+        "included": [
+            ("Channel mix & budgets", "We recommend which platforms to use and how to split your budget, based on where your buyers actually spend their time."),
+            ("Campaign build", "Account structure, audiences, keywords, placements and bidding set up properly from the start."),
+            ("Ad creative & copy", "Static, carousel and short-video ads written and designed for each platform, then tested against each other."),
+            ("Landing pages", "Fast, focused pages that turn ad clicks into calls, WhatsApp chats and form enquiries."),
+            ("Retargeting", "Follow-up ads for people who visited your site, watched your videos or messaged you but haven't bought yet."),
+            ("Tracking & reporting", "Conversions tracked in every platform and in Google Analytics, with one monthly report across all your ads."),
+        ],
+        "steps": [
+            ("Audit & plan", "We review any past campaigns, study your market and agree targets and budgets."),
+            ("Build", "Accounts, tracking, audiences and creative are set up and checked before anything goes live."),
+            ("Launch", "Campaigns start on the platforms that best fit your goals and budget."),
+            ("Improve every week", "We adjust bids, audiences, keywords and creative, and move budget to what's working."),
+        ],
+        "faqs": [
+            ("Which ad platforms do you manage?", "Google Ads (Search, Display, Shopping, Performance Max and more), YouTube, Microsoft Advertising, Meta (Facebook, Instagram and Messenger), click-to-WhatsApp and WhatsApp Status ads, LinkedIn and programmatic display. TikTok and ChatGPT ads are available for diaspora campaigns run by businesses registered in countries where those platforms sell ads. Pinterest, Snapchat, X, Reddit, Spotify, Apple and Amazon ads are available on request, where the platform accepts your business and target market. The main platforms each have their own page with the details."),
+            ("What should our ad budget be?", "That depends on your goals, your industry and the value of each new customer to your business. We usually start with a test budget, learn what works, then scale up. Your ad spend is paid directly to the platforms."),
+            ("Can you run ChatGPT ads for us?", "Not for audiences in Zimbabwe yet. As of November 2026, OpenAI doesn't sell ChatGPT ads to Zimbabwe-registered businesses or show them to people in Zimbabwe. If your business is registered in a country where ChatGPT ads are sold and you want to reach customers there, we can plan and manage the campaigns. If not, we can prepare your creative, landing pages and tracking so you're ready if OpenAI opens to more countries, and our AEO service helps you appear in ChatGPT's answers in the meantime."),
+            ("Can you reach Zimbabweans living abroad?", "Yes. We run campaigns for audiences in South Africa, the UK, the US, Australia and elsewhere, for things like property, education, groceries and family services. We reach them through location, interests and your own customer lists, never by targeting nationality."),
+        ],
+        "related": ["google-analytics", "cro", "digital-marketing"],
+    },
+    {
+        "slug": "google-analytics",
+        "name": "Google Analytics & Tracking",
+        "icon": "chart",
+        "core": True,
+        "short": "Google Analytics 4, Tag Manager and conversion tracking set up properly, so you can see which marketing brings in customers.",
+        "title": "Google Analytics 4 (GA4) Setup & Tracking | Harare, Zimbabwe",
+        "h1": "See exactly which marketing <span class=\"hl\">brings you customers</span>",
+        "intro": "Google Analytics 4 is free and powerful, but many installs are missing the things that matter most: enquiries, WhatsApp chats, calls and sales. We set up GA4 and Google Tag Manager properly, connect them to your ad accounts, and turn the numbers into reports you can act on.",
+        "problems": [
+            "Google Analytics was installed years ago and nobody has checked it since.",
+            "You can see how many people visit, but not how many became enquiries or sales.",
+            "Google Ads, Meta and your website all report different numbers for the same month.",
+            "WhatsApp chats and phone calls that start on your website aren't counted anywhere.",
+        ],
+        "included": [
+            ("GA4 setup or rescue", "A clean Google Analytics 4 property with the right data streams, filters, retention settings and key events for your business."),
+            ("Google Tag Manager", "All your tracking tags in one documented container, so changes don't need a developer."),
+            ("Key events & conversions", "Form submissions, WhatsApp clicks, calls, email clicks, bookings and purchases tracked, and shared with Google Ads and Meta."),
+            ("E-commerce tracking", "Product views, add-to-cart, checkout steps and revenue measured for online stores."),
+            ("Consent & privacy", "Cookie consent and Google Consent Mode set up where your audience needs them, in line with your privacy policy."),
+            ("Dashboards & training", "Data Studio dashboards (formerly Looker Studio) with your key numbers, plus a walkthrough so your team can read GA4 with confidence."),
+        ],
+        "steps": [
+            ("Tracking audit", "We check what's being measured, what's broken and what's missing."),
+            ("Measurement plan", "We agree which actions count as leads and sales, and how each one will be tracked."),
+            ("Implementation", "GA4, Tag Manager and ad-platform conversions are set up and tested."),
+            ("Reporting", "Dashboards go live, and monthly reviews turn the data into decisions."),
+        ],
+        "faqs": [
+            ("What is Google Analytics 4?", "Google Analytics 4 (GA4) is Google's free analytics tool. It shows how people find and use your website, and which channels lead to enquiries and sales. It replaced the older Universal Analytics in 2023."),
+            ("Why don't my Google Ads and Facebook numbers match Google Analytics?", "Each platform counts results with its own rules and time windows. We set up consistent tracking across all of them, plus one dashboard, so you can compare channels fairly."),
+            ("Can you track WhatsApp clicks and phone calls?", "Yes. Clicks on WhatsApp buttons, phone numbers and email links can be tracked as key events in GA4 and shared with Google Ads and Meta to improve your campaigns."),
+            ("Do I need a cookie banner?", "If you use analytics or ad tracking, you should tell visitors, and in many cases ask for their consent, especially if you have visitors from the UK, the EU or other places with strict privacy rules. We'll recommend a setup that suits your audience and your privacy policy."),
+        ],
+        "related": ["paid-ads", "cro", "lead-generation-crm"],
     },
     {
         "slug": "social-media",
@@ -258,7 +300,7 @@ SERVICES = [
         ],
         "included": [
             ("Google Business Profile setup & optimisation", "Categories, services, photos, products, posts and Q&A completed and kept fresh."),
-            ("Review strategy", "Simple systems to ask happy customers for Google reviews, plus guidance on responding to every review."),
+            ("Review strategy", "Simple systems to ask every customer for a Google review, plus guidance on replying to each one."),
             ("Local citations", "Consistent listings on Zimbabwean and international directories."),
             ("Location pages", "Dedicated pages for each town or suburb you serve."),
             ("Local link building", "Mentions from local news, associations, sponsors and partners."),
@@ -284,12 +326,12 @@ SERVICES = [
         "short": "Online stores with local payments, plus the ads, emails and automations that make them profitable.",
         "title": "E-commerce Website Development & Marketing | Zimbabwe",
         "h1": "Online stores that <span class=\"hl\">sell every day</span>, not just on launch day",
-        "intro": "We build e-commerce stores for Zimbabwean retailers and brands, connect local and international payment options, and then do the harder part: driving profitable traffic and turning first-time buyers into repeat customers.",
+        "intro": "We build online stores for Zimbabwean retailers and brands, connect local and international payment options, and then focus on what really decides success: bringing in profitable traffic and getting customers to come back for a second and third order.",
         "problems": [
             "Your store gets visitors but very few checkouts.",
             "Payment options don't suit local customers or the diaspora.",
             "You're paying for ads but have no idea of your real profit per order.",
-            "Customers buy once and never come back.",
+            "Most customers only ever place one order.",
         ],
         "included": [
             ("Store design & build", "WooCommerce and Shopify stores designed for mobile shoppers."),
@@ -330,9 +372,9 @@ SERVICES = [
             ("Lead nurturing sequences", "Automated messages that educate, build trust and move leads towards a decision."),
             ("WhatsApp Business automation", "Greeting messages, quick replies, catalogues and broadcast lists set up properly."),
             ("Newsletters", "Regular, genuinely useful newsletters that keep your audience engaged."),
-            ("E-commerce flows", "Welcome, abandoned-cart, post-purchase and win-back sequences."),
+            ("E-commerce flows", "Automated welcome series, abandoned-cart reminders, thank-you and review requests, and re-engagement messages."),
             ("List building", "Lead magnets and sign-up forms that grow your list with the right people."),
-            ("Segmentation & reporting", "The right message to the right people, with clear open, click and revenue numbers."),
+            ("Segmentation & reporting", "Different messages for different customer groups, with clear open, click and revenue figures."),
         ],
         "steps": [
             ("Map the journey", "We map how leads become customers today and where they drop off."),
@@ -341,7 +383,7 @@ SERVICES = [
             ("Optimise", "Subject lines, timing and offers tested to improve results."),
         ],
         "faqs": [
-            ("Is email marketing still worth it in Zimbabwe?", "Yes, especially for B2B, professional services and e-commerce. Combined with WhatsApp, which almost everyone uses, it's one of the cheapest ways to turn leads into sales."),
+            ("Does email marketing work in Zimbabwe?", "Yes, especially for B2B, professional services and e-commerce. Paired with WhatsApp, which most of your customers already use every day, it gives you a low-cost way to follow up every lead."),
             ("Will WhatsApp broadcasts get my number blocked?", "Not if it's done properly. We only message people who've opted in, and we follow WhatsApp's business policies."),
             ("Which tools do you use?", "We work with popular platforms like Mailchimp, Brevo and Klaviyo, plus WhatsApp Business and the WhatsApp Business API where volumes justify it."),
         ],
@@ -353,7 +395,7 @@ SERVICES = [
         "icon": "funnel",
         "short": "Lead-gen systems, call tracking and CRM setup (such as Pipedrive or HubSpot) that connect marketing to sales.",
         "title": "Lead Generation & CRM Setup for Zimbabwean Businesses",
-        "h1": "A steady pipeline of <span class=\"hl\">qualified leads</span>, and a system to close them",
+        "h1": "Fill your sales pipeline, then <span class=\"hl\">close more of it</span>",
         "intro": "Leads are only valuable if your team can follow them up and close them. We build lead generation systems and set up CRMs, so every enquiry from every channel lands in one place and nothing slips through the cracks.",
         "problems": [
             "Leads arrive by phone, WhatsApp, email and Facebook, and get lost.",
@@ -380,7 +422,7 @@ SERVICES = [
             ("Can you connect WhatsApp to a CRM?", "Yes, using official integrations and the WhatsApp Business API we can log WhatsApp conversations against contacts in many CRMs."),
             ("What is call tracking?", "Call tracking assigns different phone numbers to different ads or pages, so you can see exactly which marketing makes your phone ring."),
         ],
-        "related": ["email-whatsapp-marketing", "analytics", "paid-ads"],
+        "related": ["email-whatsapp-marketing", "google-analytics", "paid-ads"],
     },
     {
         "slug": "cro",
@@ -388,8 +430,8 @@ SERVICES = [
         "icon": "trending",
         "short": "UX audits and A/B testing that turn more of your existing visitors into customers.",
         "title": "Conversion Rate Optimisation (CRO) & UX Audits | Zimbabwe",
-        "h1": "Get more customers from the <span class=\"hl\">traffic you already have</span>",
-        "intro": "Doubling your conversion rate has the same effect as doubling your ad budget, without spending a cent more on ads. Conversion rate optimisation finds what's stopping visitors from acting and fixes it, based on data, not opinion.",
+        "h1": "Turn more of your visitors into <span class=\"hl\">paying customers</span>",
+        "intro": "If twice as many of your visitors got in touch, your marketing would deliver twice the results for the same spend. Conversion rate optimisation finds what stops visitors from taking action and fixes it, using real behaviour data rather than guesswork.",
         "problems": [
             "Plenty of visitors, very few enquiries or sales.",
             "Visitors leave your landing pages within seconds.",
@@ -414,41 +456,7 @@ SERVICES = [
             ("What's a good conversion rate?", "It varies by industry and offer, but many sites convert only 1 to 3 percent of visitors. Small improvements to that number can make a big difference to revenue."),
             ("Do I need lots of traffic for CRO?", "A/B testing works best with steady traffic, but even smaller sites benefit hugely from UX audits and best-practice fixes."),
         ],
-        "related": ["website-development", "analytics", "paid-ads"],
-    },
-    {
-        "slug": "analytics",
-        "name": "Analytics & Tracking",
-        "icon": "chart",
-        "short": "GA4, Google Tag Manager, conversion tracking and live dashboards so every decision is backed by data.",
-        "title": "GA4 Setup, Tracking & Marketing Reporting | Zimbabwe",
-        "h1": "Know exactly what your marketing <span class=\"hl\">is earning you</span>",
-        "intro": "If you can't measure it, you can't improve it. We set up Google Analytics 4, Google Tag Manager and conversion tracking properly, then turn the data into simple dashboards that show which channels bring in leads and sales.",
-        "problems": [
-            "Google Analytics is installed, but nobody trusts the numbers.",
-            "Your ad platforms each claim credit for the same sale.",
-            "You can't see how many calls or WhatsApp chats your website generates.",
-            "Reports are long, confusing and arrive too late to act on.",
-        ],
-        "included": [
-            ("GA4 setup & audit", "Google Analytics 4 configured with the events and conversions that matter to you."),
-            ("Google Tag Manager", "Clean, documented tag setup for all your marketing tools."),
-            ("Conversion tracking", "Forms, calls, WhatsApp clicks, purchases and leads tracked across Google and Meta."),
-            ("Search Console & Bing", "Search performance data connected and monitored."),
-            ("Live dashboards", "Looker Studio dashboards showing spend, leads, sales and ROI in one view."),
-            ("Monthly insights", "Not just numbers, but what they mean and what we'll do next."),
-        ],
-        "steps": [
-            ("Audit", "We check what's tracked, what's broken and what's missing."),
-            ("Implement", "GA4, GTM and conversion tracking set up properly."),
-            ("Visualise", "Dashboards built around your KPIs."),
-            ("Act", "Regular reviews that turn data into decisions."),
-        ],
-        "faqs": [
-            ("Why do my Google and Facebook numbers not match?", "Each platform uses its own attribution rules. We set up consistent tracking and a single dashboard so you can see a fair picture across all channels."),
-            ("Can you track WhatsApp clicks?", "Yes. We track clicks on WhatsApp buttons and links as conversions, and can go further with CRM integrations."),
-        ],
-        "related": ["cro", "lead-generation-crm", "paid-ads"],
+        "related": ["website-development", "google-analytics", "paid-ads"],
     },
     {
         "slug": "content-marketing",
@@ -488,7 +496,7 @@ SERVICES = [
         "slug": "hosting-maintenance",
         "name": "Hosting, Maintenance & Speed",
         "icon": "server",
-        "short": "Secure hosting, backups, updates and speed optimisation so your website never lets you down.",
+        "short": "Secure hosting, backups, updates and speed optimisation to keep your website fast, safe and online.",
         "title": "Website Hosting, Maintenance & Speed Optimisation | Zimbabwe",
         "h1": "A fast, secure website <span class=\"hl\">you never have to worry about</span>",
         "intro": "A slow, hacked or broken website costs you customers every hour it's down. We host, back up, update and speed up websites for Zimbabwean businesses, so yours stays fast and online.",
@@ -500,10 +508,10 @@ SERVICES = [
         ],
         "included": [
             ("Managed hosting", "Fast, reliable hosting with SSL certificates included."),
-            ("Daily backups", "Off-site backups so your site can be restored quickly."),
+            ("Regular backups", "Scheduled off-site backups, so your site can be restored quickly if something goes wrong."),
             ("Updates & security", "Core, theme and plugin updates, malware scanning and firewall protection."),
             ("Speed optimisation", "Image compression, caching and code clean-up for faster load times."),
-            ("Uptime monitoring", "We're alerted the moment your site goes down."),
+            ("Uptime monitoring", "Automatic checks that alert us if your site goes down, so we can act fast."),
             ("Content updates", "Small edits and updates handled for you each month."),
         ],
         "steps": [
@@ -538,12 +546,34 @@ INDUSTRIES = [
 ]
 
 FAQS_GENERAL = [
-    ("Where is Smart Click Media based?", "We're based in Harare, Zimbabwe, and we serve businesses in every province, from Bulawayo and Mutare to Victoria Falls, Gweru and Masvingo."),
-    ("What services does Smart Click Media offer?", "Digital marketing strategy, website design and development, SEO, AEO (AI search optimisation), paid ads on Google, Meta, TikTok, YouTube and LinkedIn, social media management, local SEO, e-commerce, email and WhatsApp marketing, lead generation and CRM, conversion rate optimisation, analytics, content marketing, and website hosting and maintenance."),
-    ("How do I get started?", "Call or WhatsApp us on 0771 269 979, or fill in the form on our contact page. We'll book a free strategy session, review your current marketing and suggest a plan."),
-    ("Do you work with small businesses?", "Yes. We work with start-ups, SMEs and large organisations. We'll be honest about what budget is needed to get results, and we won't sell you services you don't need."),
-    ("Do you lock clients into long contracts?", "No. We prefer to earn your business month by month. Your ad accounts, website and data always remain yours."),
-    ("How do you report on results?", "You get a clear monthly report covering leads, sales, spend and what we did, plus a call with the specialist who runs your account. We focus on business results, not vanity metrics."),
+    ("Where is Smart Click Media based?", "We're based in Harare, Zimbabwe, and we work with businesses in every province, from Bulawayo and Mutare to Victoria Falls, Gweru and Masvingo, as well as brands targeting Zimbabweans abroad."),
+    ("What services does Smart Click Media offer?", "Digital marketing strategy, website design and development, SEO, AEO (AI search optimisation), paid ads on every major platform (Google, YouTube, Microsoft, Meta, WhatsApp, TikTok, LinkedIn, programmatic, and ChatGPT where available), Google Analytics and tracking, social media management, local SEO, e-commerce, email and WhatsApp marketing, lead generation and CRM, conversion rate optimisation, content marketing, and website hosting and maintenance."),
+    ("When can I contact you?", "Any time. We're open 24/7. Call or WhatsApp 0771 269 979, or email info@smartclick.co.zw."),
+    ("How do I get started?", "Call or WhatsApp us on 0771 269 979, email info@smartclick.co.zw, or fill in the form on our contact page. We'll set up a free strategy session, look at your current marketing and suggest a plan."),
+    ("Do you work with small businesses?", "Yes. We work with start-ups, small and medium businesses and large organisations. We'll be upfront about the budget needed to get results, and we won't sell you services you don't need."),
+    ("How do you report on results?", "You get a clear monthly report covering enquiries, sales, spend and the work done, plus a review call. We focus on business results rather than likes and impressions."),
     ("Can you market to Zimbabweans in the diaspora?", "Yes. We regularly target Zimbabweans in South Africa, the UK, the US, Australia and elsewhere for property, education, groceries, hampers and other services."),
-    ("Do you speak Shona and Ndebele?", "Yes. We can create campaigns and content in English, Shona and Ndebele, depending on what connects best with your audience."),
+    ("Can you create content in Shona or Ndebele?", "Yes. Campaigns and content can be produced in English, Shona or Ndebele, depending on what connects best with your audience."),
 ]
+
+# ---------------------------------------------------------------------------
+# Larger collections are kept as JSON in _build/data/ so they are easy to edit.
+# ---------------------------------------------------------------------------
+import json as _json
+import os as _os
+
+_DATA = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "data")
+
+
+def _load(name):
+    path = _os.path.join(_DATA, name)
+    if not _os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as f:
+        return _json.load(f)
+
+
+AD_PLATFORMS = _load("ad_platforms.json")   # pages under services/paid-ads/
+PORTFOLIO = _load("portfolio.json")         # example projects under portfolio/
+ARTICLES = _load("articles.json")           # insights/ blog articles
+LOCATIONS = _load("locations.json")         # locations/ city pages

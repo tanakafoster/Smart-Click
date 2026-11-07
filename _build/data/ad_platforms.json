@@ -1,0 +1,776 @@
+[
+ {
+  "slug": "google-ads",
+  "name": "Google Ads",
+  "group": "Search and AI assistants",
+  "icon": "search",
+  "badge": "",
+  "note": "",
+  "short": "Search, Performance Max, Demand Gen, Display and Shopping campaigns for Zimbabwe and the diaspora, tracked through to calls, chats and sales.",
+  "title": "Google Ads Management in Harare, Zimbabwe",
+  "description": "Google Ads management from Harare: Search, Performance Max, Demand Gen and Shopping campaigns for Zimbabwe and the diaspora, tracked to real enquiries.",
+  "h1": "Google Ads that turn searches into <span class=\"hl\">calls and WhatsApp chats</span>",
+  "intro": "Google Ads puts your business in front of people at the moment they search for what you sell, whether they're in Harare, Bulawayo or a diaspora market abroad. It suits businesses that people actively search for, from clinics, solar installers and car hire firms to schools and property developers. We build and manage Search, Performance Max, Demand Gen, Display and Shopping campaigns, with tracking that shows which keywords and ads lead to calls, WhatsApp chats and enquiries.",
+  "problems": [
+   "Your ads show for searches that have little to do with what you sell, and you pay for every one of those clicks.",
+   "A Performance Max campaign is spending your budget, and nobody has explained where your ads appear or what they bring in.",
+   "Google reports plenty of conversions, but your team can't match them to real calls, chats or sales.",
+   "You only serve Harare or a few towns, yet your ads reach people across the country who can't buy from you."
+  ],
+  "included": [
+   [
+    "Search campaigns",
+    "Keywords chosen by buying intent, responsive search ads, negative keyword lists and location settings for the towns you serve, so you pay for searches that can turn into customers."
+   ],
+   [
+    "Performance Max",
+    "One campaign across Search, YouTube, Display, Discover, Gmail and Maps, fed with your strongest images, videos and audience signals, and judged on enquiries your team confirms."
+   ],
+   [
+    "Demand Gen and Display",
+    "Image, carousel and video ads on YouTube, Discover, Gmail and Google's Display Network. They reach people before they start searching, and we judge them on the enquiries they bring, not on impressions."
+   ],
+   [
+    "Shopping ads for online stores",
+    "Google product feeds and Shopping campaigns for stores selling in Zimbabwe, with prices in US dollars, and in diaspora markets such as South Africa, the UK, the US and Australia."
+   ],
+   [
+    "Google AI Overviews and AI Mode",
+    "Ads inside Google AI Overviews and AI Mode are offered only in the countries Google has opened them to, and Google decides automatically when they appear. They come from your existing campaigns, not a separate purchase, and we confirm whether your target market qualifies before launch."
+   ],
+   [
+    "Tracking that matches your sales",
+    "GA4 and Google Tag Manager set up to count form enquiries, taps on your phone number, WhatsApp clicks and online sales, then shared with Google Ads so bidding learns from real leads."
+   ]
+  ],
+  "steps": [
+   [
+    "Audit or research",
+    "For an existing account we look for wasted spend and broken tracking. For a new one we research what your buyers search for, town by town."
+   ],
+   [
+    "Plan",
+    "You get a campaign plan with keywords, locations, a starting budget and the cost per enquiry we'll aim for. Ad spend goes directly to Google."
+   ],
+   [
+    "Build",
+    "Campaigns, ads, assets, audiences and conversion tracking are set up in an account owned by your business, then checked before launch."
+   ],
+   [
+    "Optimise weekly",
+    "We add negative keywords, adjust bids and locations and test new ads every week, with a plain monthly report on enquiries and sales."
+   ]
+  ],
+  "faqs": [
+   [
+    "Can a business in Zimbabwe advertise on Google Ads?",
+    "Yes. Zimbabwe is a Google Ads billing country and isn't on Google's list of restricted countries, so a business based here can run Search, Display, YouTube, Performance Max, Demand Gen and Shopping campaigns aimed at Zimbabwe or at markets abroad. Google still reviews every ad against its policies, so approval isn't automatic."
+   ],
+   [
+    "How much should we budget for Google Ads?",
+    "It depends on how many people search for what you sell, how many competitors bid on the same searches and what a new customer is worth to you. We suggest a test budget after keyword research and adjust it once real results come in. Your ad spend is paid directly to Google, separately from our management fee."
+   ],
+   [
+    "Will our ads appear in Google's AI Overviews or AI Mode?",
+    "Possibly, in some countries. There's no separate purchase: ads in AI Overviews come from Search, Shopping and Performance Max campaigns, and you can't target or opt out of that placement. Ads in AI Overviews and AI Mode are only offered in the countries Google has opened them to, so we check your target market before launch. Ordinary search ads can still show above or below an AI Overview."
+   ],
+   [
+    "Can Google Ads reach Zimbabweans living abroad?",
+    "Yes. We target countries such as South Africa, the UK, the US and Australia, then focus on what diaspora buyers search for, like stands in Harare, school fees or groceries for family at home. We don't target people by nationality or ethnicity. We reach Zimbabweans abroad through location, interests, language and your own customer lists."
+   ]
+  ],
+  "related": [
+   "youtube-ads",
+   "google-analytics",
+   "cro"
+  ]
+ },
+ {
+  "slug": "microsoft-ads",
+  "name": "Microsoft Advertising",
+  "group": "Search and AI assistants",
+  "icon": "compass",
+  "badge": "",
+  "note": "We confirm the account set-up and billing route for Zimbabwe-based businesses with Microsoft before launch. Microsoft decides when ads show in Copilot and doesn't publish which countries get them.",
+  "short": "Search ads on Bing and partner sites, managed alongside Google, with Copilot placements where Microsoft chooses to show them.",
+  "title": "Microsoft Advertising (Bing Ads) in Zimbabwe",
+  "description": "Microsoft Advertising for Zimbabwean businesses: search ads on Bing and partner sites, Google campaign imports, UET tracking and Copilot-eligible set-up.",
+  "h1": "Search ads on <span class=\"hl\">Bing and partner sites</span>, managed alongside Google",
+  "intro": "Microsoft Advertising, formerly Bing Ads, shows your search ads on Bing and on partner sites such as Yahoo, AOL and DuckDuckGo. Eligible campaigns can also appear in Microsoft Copilot. We run it next to your Google Ads to reach the people who search outside Google.",
+  "problems": [
+   "Google Ads works for you, but each extra enquiry from it is getting harder to win.",
+   "You've wondered about Bing ads, but nobody could tell you whether Microsoft works with businesses in Zimbabwe.",
+   "Your Google campaigns were copied into Microsoft once, and nobody has touched them since.",
+   "You'd like to show up in Microsoft Copilot, but nobody has explained how ads get there."
+  ],
+  "included": [
+   [
+    "Bing and partner search ads",
+    "Keyword-led campaigns built around what your buyers type into Bing and its partner sites. If partner sites bring weak leads, we change your ad distribution settings to cut that traffic."
+   ],
+   [
+    "Import from Google, then tune",
+    "Campaigns that already work on Google are brought across with Microsoft's import tools, then keywords, bids, negatives and ad copy are adjusted to Microsoft's own results."
+   ],
+   [
+    "Copilot-eligible set-up",
+    "Microsoft lists search ads with a logo, Multimedia ads, and product ads from Shopping or Performance Max campaigns among the formats that can appear in Copilot. We set campaigns up to meet those rules, but Microsoft decides when Copilot ads show."
+   ],
+   [
+    "Performance Max",
+    "Microsoft's Performance Max runs search, audience and product ads from one campaign across Microsoft's advertising network. We check which ad types Microsoft offers in your target market before launch."
+   ],
+   [
+    "UET conversion tracking",
+    "Microsoft's UET tag counts form enquiries, purchases, taps on your phone number and WhatsApp clicks as conversion goals, and builds remarketing lists of people who visited your site."
+   ],
+   [
+    "Diaspora search campaigns",
+    "A separate campaign for each diaspora market, such as South Africa, the UK, the US or Australia, with its own budget, ads scheduled for local hours and copy written for buyers there."
+   ]
+  ],
+  "steps": [
+   [
+    "Confirm access",
+    "We check with Microsoft how your business can open and pay for an account, and agree whether Zimbabwe or a diaspora market comes first."
+   ],
+   [
+    "Import or build",
+    "We import what already works on Google, or build fresh campaigns, then add logos, ad assets and the UET tag."
+   ],
+   [
+    "Launch",
+    "Campaigns go live with a budget you set and a clear target cost per enquiry. Ad spend is paid to Microsoft, or to the billing partner Microsoft names, never to us."
+   ],
+   [
+    "Compare and adjust",
+    "Microsoft results sit next to Google's in one monthly report, and we adjust keywords, bids and partner-site distribution."
+   ]
+  ],
+  "faqs": [
+   [
+    "Can a Zimbabwean business advertise with Microsoft?",
+    "Zimbabwe has been a Microsoft Advertising market since 2022, so ads can be shown to people here. When Microsoft opened African markets, it sent advertisers based in Africa to a sales partner, InMobi, and it's unclear whether that still applies. We confirm the current set-up and billing route for your business before launch."
+   ],
+   [
+    "Will our ads show in Microsoft Copilot?",
+    "They can, but no one can promise it. Copilot placements come from standard Microsoft Advertising campaigns, and Microsoft decides when and where they show. It doesn't publish which countries get ads in Copilot, advertisers can't opt out, and Copilot results aren't reported separately."
+   ],
+   [
+    "Do we need Microsoft Advertising if we already use Google Ads?",
+    "Not always. For most businesses Google comes first. Once your Google campaigns are working, Microsoft is a sensible next test, and we can import those campaigns as a starting point. It is especially worth trying for professional services, B2B suppliers and diaspora campaigns."
+   ],
+   [
+    "Can Microsoft ads reach the diaspora?",
+    "Yes. South Africa, the UK, the US and Australia are all Microsoft Advertising markets. We target by location and language, and by remarketing to people who've visited your site, rather than targeting anyone by nationality."
+   ]
+  ],
+  "related": [
+   "google-ads",
+   "aeo",
+   "google-analytics"
+  ]
+ },
+ {
+  "slug": "chatgpt-ads",
+  "name": "ChatGPT Ads",
+  "group": "Search and AI assistants",
+  "icon": "bot",
+  "badge": "Diaspora",
+  "note": "For diaspora campaigns run through a business registered in a country where OpenAI sells ChatGPT ads. As of November 2026, they are not available to Zimbabwe-registered businesses or for reaching people in Zimbabwe.",
+  "short": "Ads inside ChatGPT for diaspora brands registered where OpenAI sells them, plus straight advice and preparation if you can't advertise there.",
+  "title": "ChatGPT Ads for Zimbabwean Diaspora Brands",
+  "description": "ChatGPT ads explained for Zimbabwean brands: who can buy them, where they show, and how we prepare and manage campaigns for eligible diaspora businesses.",
+  "h1": "ChatGPT ads for <span class=\"hl\">diaspora campaigns</span>, with straight answers on access",
+  "intro": "OpenAI now shows clearly labelled sponsored ads in ChatGPT, but only in the countries where it sells them, and Zimbabwe isn't one of them for now. For diaspora brands registered in an eligible country, we check access, prepare tracking, landing pages and creative, and manage campaigns where the account allows it. No ad can buy a place in ChatGPT's answers themselves, so we pair this with our AEO service.",
+  "problems": [
+   "You've read about ads in ChatGPT but can't get a straight answer on whether your business can use them.",
+   "Someone has offered to put your brand inside ChatGPT's answers, and you're not sure that's even possible.",
+   "Your customers in the UK or the US ask ChatGPT for recommendations, and your business never comes up.",
+   "You'd like to be ready if OpenAI opens ads to more countries, but don't know what a campaign needs."
+  ],
+  "included": [
+   [
+    "Eligibility check",
+    "We compare OpenAI's current ad markets with where your business is registered and where your customers live. If ChatGPT ads aren't open to you, we tell you plainly and suggest where the budget will do more."
+   ],
+   [
+    "Account set-up",
+    "For eligible businesses, we help set up the ad account in your company's own name, work through OpenAI's business checks and manage campaigns for you where OpenAI's account settings allow it."
+   ],
+   [
+    "Context and audience targeting",
+    "ChatGPT ads use context hints rather than exact keywords, plus targeting by location, platform (app or web) and customer list. Customer lists only work for inclusion once at least 25,000 people match, so most campaigns start with context and location."
+   ],
+   [
+    "Ads and landing pages",
+    "Short, specific ad copy and images that fit the conversation, linking to a fast page that answers the question and makes it easy to call, WhatsApp or buy."
+   ],
+   [
+    "Conversion tracking",
+    "OpenAI's pixel or Conversions API, plus GA4 and WhatsApp click tracking. Advertisers only receive aggregate results such as views and clicks, never anyone's chats."
+   ],
+   [
+    "A ready-to-launch kit",
+    "Want to be ready if OpenAI opens ChatGPT ads to more countries? We can prepare your ad creative, landing pages and tracking now, so you can move quickly."
+   ]
+  ],
+  "steps": [
+   [
+    "Check access",
+    "We confirm whether OpenAI sells ads where your business is registered and where your customers are, using OpenAI's current list."
+   ],
+   [
+    "Prepare",
+    "Tracking, landing pages and ad copy are built, whether you can launch now or are waiting for access."
+   ],
+   [
+    "Launch where available",
+    "Eligible campaigns start with a test budget, paid directly to OpenAI, and clear goals for clicks and enquiries."
+   ],
+   [
+    "Report and build AEO",
+    "We report on results and keep improving how AI assistants describe your business through AEO, which doesn't depend on ad access."
+   ]
+  ],
+  "faqs": [
+   [
+    "Can a Zimbabwean business buy ChatGPT ads?",
+    "Not at the moment. As of November 2026, ChatGPT ads are not available to Zimbabwe-registered businesses or for reaching people in Zimbabwe. OpenAI is opening access gradually, and businesses outside its ad markets can register their interest with OpenAI. We'll tell you if that changes."
+   ],
+   [
+    "Who sees ads in ChatGPT?",
+    "Adult users on ChatGPT's Free and Go plans, in the countries where OpenAI runs ads. The Plus, Pro, Business, Enterprise and Education plans have no ads, OpenAI doesn't show ads to users it believes are under 18, and ads aren't placed near sensitive topics such as health, mental health or politics."
+   ],
+   [
+    "Will a ChatGPT ad get us mentioned in ChatGPT's answers?",
+    "No. OpenAI says ads are labelled 'Sponsored', kept separate from the answer and don't influence what ChatGPT says. Your chance of being named in the answer itself rests on AEO: clear, consistent and trusted information about your business across the web, though no one can guarantee a mention. AEO is open to any business, wherever it's registered."
+   ],
+   [
+    "Our company is registered abroad. Can you run ChatGPT ads for us?",
+    "If your company is genuinely registered in a country where OpenAI sells ChatGPT ads, for example a UK company serving Zimbabweans in Britain, we can check eligibility, help with set-up, build tracking, landing pages and ads, and manage campaigns where the account allows it. We won't suggest registering a company abroad just to get access."
+   ]
+  ],
+  "related": [
+   "aeo",
+   "google-ads",
+   "microsoft-ads"
+  ]
+ },
+ {
+  "slug": "youtube-ads",
+  "name": "YouTube Ads",
+  "group": "Video and display",
+  "icon": "play",
+  "badge": "",
+  "note": "",
+  "short": "Skippable, Shorts, in-feed and bumper ads on YouTube, scripted and targeted for Zimbabwe or the diaspora, and judged on enquiries, not just views.",
+  "title": "YouTube Ads Management in Harare, Zimbabwe",
+  "description": "YouTube advertising for Zimbabwean businesses: skippable, Shorts, in-feed and bumper ads, scripted, targeted and tracked to calls and WhatsApp chats.",
+  "h1": "Turn YouTube viewers into <span class=\"hl\">callers and customers</span>",
+  "intro": "YouTube ads are bought through Google Ads and can reach viewers in Zimbabwe as well as in diaspora markets such as South Africa, the UK, the US and Australia. They suit businesses with something worth showing, such as lodges, schools, property developments, solar installations and restaurants. We plan, script and run the campaigns, then track what viewers do next: visit your site, call, send a WhatsApp or buy.",
+  "problems": [
+   "You've made a good video, but it sits on your channel with hardly any views.",
+   "Your YouTube ads collect views, yet nobody can say whether a single one led to an enquiry.",
+   "Viewers skip your ad before your name or offer even appears.",
+   "You don't have a big production budget and aren't sure what kind of video works as an ad."
+  ],
+  "included": [
+   [
+    "Skippable in-stream ads",
+    "Ads that play before, during or after other YouTube videos and can be skipped after five seconds. They suit demos, property tours and offers that need more than a few seconds to explain."
+   ],
+   [
+    "Shorts and in-feed ads",
+    "Vertical ads between videos in the Shorts feed, and video ads in YouTube search results and the Home and Watch Next feeds that people choose to tap and watch."
+   ],
+   [
+    "Bumper and non-skippable ads",
+    "Bumper ads of up to six seconds and short non-skippable ads for reach and recall around a launch, an intake or a promotion, bought per thousand impressions."
+   ],
+   [
+    "Demand Gen for leads and sales",
+    "Video and image ads across YouTube Shorts, in-stream and in-feed placements, plus Discover and Gmail, set to win clicks or conversions rather than views."
+   ],
+   [
+    "Targeting that fits your buyers",
+    "Whole countries or particular towns, custom segments built from relevant search terms and websites, topics and chosen channels, plus people who've watched your videos or are on your customer list."
+   ],
+   [
+    "Scripts, editing and tracking",
+    "Scripts that put your brand and offer in the first five seconds, cut-downs for each format, and GA4 tracking of the visits, calls and WhatsApp chats that follow."
+   ]
+  ],
+  "steps": [
+   [
+    "Set the goal",
+    "We agree whether the campaign's job is reach, views or enquiries, and who needs to see it."
+   ],
+   [
+    "Script and produce",
+    "We write scripts, edit your footage or arrange a shoot, and make versions for each format."
+   ],
+   [
+    "Launch",
+    "Your channel is linked to Google Ads, tracking goes live and campaigns start. Ad spend is paid straight to Google."
+   ],
+   [
+    "Review and refine",
+    "We check view rate, cost per view and enquiries each week, pause weak ads and back the ones that work."
+   ]
+  ],
+  "faqs": [
+   [
+    "Can YouTube ads target Zimbabwe and the diaspora?",
+    "Yes. YouTube ads are bought through Google Ads, and there's no country restriction for Zimbabwe or for diaspora markets such as South Africa, the UK, the US and Australia. We can target whole countries or particular towns, and run separate campaigns for each market."
+   ],
+   [
+    "Do we pay when someone skips our ad?",
+    "With skippable ads on cost-per-view bidding, you're charged when someone watches 30 seconds, or the whole ad if it's shorter, or interacts with it, so a quick skip costs nothing. Bumper and non-skippable ads are bought per thousand impressions instead, and we'll explain which suits your goal."
+   ],
+   [
+    "Do we need an expensive video?",
+    "No. Product demos, walk-throughs, customer stories and simple animations can all work if the message lands early. We help with scripts and editing, and only recommend a professional shoot when it's worth the cost."
+   ],
+   [
+    "How do we know if YouTube ads are working?",
+    "Views, view rate, cost per view and reach tell part of the story, but we judge success on the visits, calls, WhatsApp chats and enquiries that follow. Conversions are tracked in Google Ads and GA4, and YouTube sits beside your other channels in one monthly report."
+   ]
+  ],
+  "related": [
+   "google-ads",
+   "programmatic-display",
+   "content-marketing"
+  ]
+ },
+ {
+  "slug": "programmatic-display",
+  "name": "Programmatic & Display Ads",
+  "group": "Video and display",
+  "icon": "grid",
+  "badge": "",
+  "note": "Programmatic buying through specialist platforms is arranged case by case where your budget and target market justify it. For most campaigns in Zimbabwe we use Google's Display Network and YouTube.",
+  "short": "Display banners and retargeting through Google's Display Network, with specialist programmatic platforms arranged case by case.",
+  "title": "Display & Programmatic Advertising in Zimbabwe",
+  "description": "Display ads and retargeting for Zimbabwean businesses through Google's Display Network, with DSP and native buying arranged case by case when it pays.",
+  "h1": "Display ads and retargeting that <span class=\"hl\">bring visitors back</span>",
+  "intro": "Display ads put your brand on the websites and apps your customers already use, and retargeting reminds people who visited without getting in touch. We plan who sees your ads, design them for every screen size and check where they appear, then judge each campaign on the enquiries it brings.",
+  "problems": [
+   "People visit your website, look around and leave, and you have no way to bring them back.",
+   "Your banners ran on random apps and games, and the clicks never turned into enquiries.",
+   "You've been sold 'programmatic' packages full of impressions with no link to sales.",
+   "Your display ads look dated, and nobody has tested a new design in months."
+  ],
+  "included": [
+   [
+    "Google Display Network campaigns",
+    "Responsive display ads on websites and apps in Google's network, including Zimbabwean sites that show Google ads, targeted by audience, topic, location or chosen websites."
+   ],
+   [
+    "Demand Gen campaigns",
+    "Google's Demand Gen campaigns can run image and video ads across the Display Network, YouTube, Discover and Gmail. Where Demand Gen suits your goal, we set it up and check that audiences and exclusions from any existing Display campaigns carry across."
+   ],
+   [
+    "Retargeting",
+    "Follow-up ads for people who visited your site, watched your YouTube videos or are on your customer list, including dynamic ads that show online shoppers the products they viewed."
+   ],
+   [
+    "Finding new audiences",
+    "Custom segments built from relevant search terms, websites and apps, plus lookalike segments in Demand Gen that find people similar to your customers."
+   ],
+   [
+    "Brand safety",
+    "Placement and topic exclusions, account-level content suitability settings and regular placement reviews to help keep your ads away from unsuitable sites and apps."
+   ],
+   [
+    "Specialist programmatic and native",
+    "For larger campaigns, we can look at demand-side platforms such as Display & Video 360 or The Trade Desk, or native networks such as Taboola and Teads (formerly Outbrain), and arrange access case by case."
+   ]
+  ],
+  "steps": [
+   [
+    "Audience and offer",
+    "We decide who to reach, who to bring back and what offer gives them a reason to click."
+   ],
+   [
+    "Design",
+    "Display assets in landscape, square and portrait shapes with your logo and clear headlines, so the ads fit whatever space is available."
+   ],
+   [
+    "Launch with safeguards",
+    "Campaigns go live with exclusions and conversion tracking in place, and ad spend paid directly to Google. For any specialist platform, we agree the billing route with you before launch."
+   ],
+   [
+    "Prune and scale",
+    "We review where ads appeared, exclude placements that waste money and move budget to the audiences that bring enquiries."
+   ]
+  ],
+  "faqs": [
+   [
+    "What is programmatic advertising?",
+    "It's automated buying of ad space across many websites and apps, where software bids for each ad impression. Google's Display Network also sells space through automated auctions, and bigger campaigns can use demand-side platforms (DSPs) such as Display & Video 360 or The Trade Desk."
+   ],
+   [
+    "Can you place display ads on Zimbabwean websites?",
+    "Yes, through Google's Display Network, on Zimbabwean websites and apps that show Google ads. Access to other programmatic platforms, their minimum spends and how much Zimbabwean inventory they offer all vary, so we check them for each campaign and tell you honestly whether they're worth it."
+   ],
+   [
+    "Is retargeting worth it for a small business?",
+    "Often, yes. It focuses spend on people who already know you, so even a modest budget can work. Broad awareness display needs more money to make an impression, so smaller businesses usually start with retargeting."
+   ],
+   [
+    "How do you judge a display campaign?",
+    "On what people do after they see or click your ads: time on your site, WhatsApp chats, calls, enquiries and sales tracked in GA4 and Google Ads, plus cost per enquiry. Impressions and click rates come second, because accidental clicks can make a campaign look busier than it is."
+   ]
+  ],
+  "related": [
+   "google-ads",
+   "youtube-ads",
+   "meta-ads"
+  ]
+ },
+ {
+  "slug": "meta-ads",
+  "name": "Facebook & Instagram Ads",
+  "group": "Social and messaging",
+  "icon": "users",
+  "badge": "",
+  "note": "",
+  "short": "Facebook, Instagram, Messenger and Threads campaigns built in Meta Ads Manager and measured on the enquiries and sales they bring in.",
+  "title": "Facebook & Instagram Ads in Harare, Zimbabwe",
+  "description": "Facebook, Instagram and Messenger ads for Zimbabwean businesses: lead forms, chat ads, Reels and catalogue ads, tracked with the Meta Pixel and GA4.",
+  "h1": "Facebook and Instagram ads that turn scrolling into <span class=\"hl\">orders and enquiries</span>",
+  "intro": "Facebook and Instagram are where many Zimbabweans discover local businesses, compare prices and send a first message, which makes Meta ads a strong fit for shops, restaurants, salons, schools, solar installers, car dealers and online stores. We build your campaigns in Meta Ads Manager, choosing the objective, audience, placement and creative for each goal, and track the forms, chats and sales that each ad brings in. Your ad spend is paid directly to Meta, from an ad account in your business's name.",
+  "problems": [
+   "You press Boost every now and then, with no clear goal and no way of knowing what it achieved.",
+   "Your posts collect 'price?' comments and inbox messages, but few of those people ever pay.",
+   "Leads from Facebook forms come with wrong numbers, or from people who don't remember filling them in.",
+   "You've run the same picture for months, and every enquiry seems to cost a little more than the last."
+  ],
+  "included": [
+   [
+    "Campaigns built in Ads Manager",
+    "We pick Meta's Awareness, Traffic, Engagement, Leads or Sales objective to suit what you need, then set budgets, audiences and placements deliberately instead of leaning on the Boost button."
+   ],
+   [
+    "Placements and creative",
+    "Feeds, Stories and Reels on Facebook and Instagram, plus Messenger, each with creative made for it: vertical video for Reels and Stories, carousels and clear prices for feeds, in English, Shona or Ndebele. Threads ads run as an added placement on Facebook and Instagram campaigns."
+   ],
+   [
+    "Audiences and retargeting",
+    "Location, age and interests to find new customers, Custom Audiences built from your website visitors and from customer lists you have permission to use, and Lookalike Audiences that reach people similar to your buyers."
+   ],
+   [
+    "Lead forms and chat ads",
+    "Forms that open inside Facebook and Instagram, pre-filled with details people have already shared with Meta, or ads that open a Messenger or WhatsApp chat. New leads can flow straight into your CRM."
+   ],
+   [
+    "Catalogue ads for online stores",
+    "We connect your product feed so Meta can show items from your whole catalogue, with current images, descriptions and prices, to the people most likely to want them. They rely on the Meta Pixel, or on app events if you sell through an app."
+   ],
+   [
+    "Meta Pixel, Conversions API and GA4",
+    "The Meta Pixel and Conversions API record form fills and purchases on your site, GA4 key events capture WhatsApp and call clicks, and call tracking picks up phone enquiries. We can also send lead outcomes from your CRM back to Meta, so it learns which leads became customers."
+   ]
+  ],
+  "steps": [
+   [
+    "Check accounts and tracking",
+    "We make sure your Facebook Page, Instagram account and ad account belong to your business, then install or repair the Meta Pixel, Conversions API and GA4 events."
+   ],
+   [
+    "Plan the offer and audience",
+    "We agree what you're selling, to whom and where, choose the objective and write ads that show the price and the next step."
+   ],
+   [
+    "Launch and test",
+    "Several versions of each ad go live side by side, so the results show which image, video, headline and audience earn their keep."
+   ],
+   [
+    "Scale and refresh",
+    "Every week we move budget towards the ads bringing in buyers, retire tired creative and check lead quality with your team, judging it all on cost per lead and cost per sale."
+   ]
+  ],
+  "faqs": [
+   [
+    "Can a business in Zimbabwe advertise on Facebook and Instagram?",
+    "Yes. Businesses based in Zimbabwe can run Meta ads aimed at customers at home and abroad. Which payment methods you can use depends on your country and currency, so we check them with you when we set up or review your ad account."
+   ],
+   [
+    "Is boosting a post the same as running a campaign?",
+    "Not quite. Boosting is a quick way to show an existing post to more people. A campaign built in Ads Manager lets us choose the objective, audiences and placements, run several ads against each other and track what each one brings in. Boosted posts can play a small part, but rarely the whole plan."
+   ],
+   [
+    "Do we need a website to run Facebook and Instagram ads?",
+    "No. Lead forms and ads that open a Messenger or WhatsApp chat work without one, which suits many small businesses, though lead forms must include a link to your privacy policy. A fast landing page still helps: it gives you room to explain your offer, builds trust and makes sales easier to track."
+   ],
+   [
+    "Can you reach Zimbabweans living in South Africa, the UK or elsewhere?",
+    "Yes. We target the countries and cities where your buyers live, use interests, language and your own customer lists, and write ads that speak clearly to people supporting family in Zimbabwe. We don't target anyone by nationality or ethnicity. If you advertise property, jobs or financial products, Meta's special ad category rules can limit targeting by age, gender, location and lookalike audiences in some countries, including the US, so we plan those campaigns around them."
+   ]
+  ],
+  "related": [
+   "whatsapp-ads",
+   "social-media",
+   "google-analytics"
+  ]
+ },
+ {
+  "slug": "whatsapp-ads",
+  "name": "WhatsApp Ads",
+  "group": "Social and messaging",
+  "icon": "message",
+  "badge": "",
+  "note": "WhatsApp Status ads are not offered in every country, so we confirm availability for your audience in Meta Ads Manager before launch.",
+  "short": "Click-to-WhatsApp ads on Facebook and Instagram, plus WhatsApp Status ads, with fast replies and CRM follow-up that turn chats into sales.",
+  "title": "WhatsApp Ads in Zimbabwe | Click-to-WhatsApp",
+  "description": "Click-to-WhatsApp and WhatsApp Status ads for Zimbabwean businesses, with chat scripts, fast follow-up, CRM tracking and reports on cost per sale.",
+  "h1": "WhatsApp ads that start <span class=\"hl\">real sales conversations</span>",
+  "intro": "Many Zimbabwean buyers would rather ask on WhatsApp than fill in a form, especially before paying for solar systems, school places, stands, cars or grocery deliveries for family. Click-to-WhatsApp ads on Facebook and Instagram open a chat with your business in one tap, and Status ads appear between the updates people watch on WhatsApp itself. We run both, and set up the replies, follow-up and tracking that turn those chats into paying customers.",
+  "problems": [
+   "Your ads bring in chats, but replies take hours and by then the buyer has moved on to another seller.",
+   "Most chats open with a bare 'Hi', so your team spends ages working out what each person wants.",
+   "Meta reports plenty of conversations started, yet nobody can say how many became sales.",
+   "Every enquiry sits on one staff member's phone, so leads go cold whenever that person is off duty."
+  ],
+  "included": [
+   [
+    "Click-to-WhatsApp ads",
+    "Ads in Facebook and Instagram feeds, Stories and Reels with a button that opens a WhatsApp chat with you. We usually optimise them for conversations, with separate versions for local and diaspora audiences."
+   ],
+   [
+    "WhatsApp Status ads",
+    "Image, video or carousel ads shown between people's Status updates, opening a chat or your website. Status can only be bought together with the Instagram Stories placement, in the same ad set. It isn't open to Meta's special ad categories (financial products, employment, housing, and social issues, elections or politics), and Meta also keeps some health and pharmaceutical ads out of Status."
+   ],
+   [
+    "A better first message",
+    "We write the pre-filled message people send when they tap your ad and add a few ready-made questions they can pick from, such as delivery areas or prices, so each chat starts with something your team can act on."
+   ],
+   [
+    "Replies and follow-up",
+    "Greeting and away messages, quick replies, labels and a product catalogue in WhatsApp Business, plus follow-up messages for people who asked but didn't buy, sent only to those who agreed to hear from you."
+   ],
+   [
+    "Chats logged in your CRM",
+    "With the WhatsApp Business Platform, each chat that starts from an ad is logged against a contact in your CRM and moved from first message to quote, payment and delivery, so no lead depends on one person's phone."
+   ],
+   [
+    "Sales sent back to Meta",
+    "If you use the WhatsApp Business Platform through a provider that supports it, we can send qualified leads and purchases from your chats back to Meta with the Conversions API for Business Messaging, so your ads learn to find buyers rather than browsers."
+   ]
+  ],
+  "steps": [
+   [
+    "Set up your WhatsApp",
+    "We connect your WhatsApp Business number to your Facebook Page and ad account, and tidy your profile, catalogue, hours and away message."
+   ],
+   [
+    "Script the conversation",
+    "We write the opening message, quick questions and saved answers for the questions your ads will trigger, and agree who replies and how fast."
+   ],
+   [
+    "Launch by market",
+    "Click-to-WhatsApp ads, and Status ads where Meta offers them, go live with a separate campaign for Zimbabwe and for each diaspora country."
+   ],
+   [
+    "Count sales, not chats",
+    "Chats are labelled by stage, and we report cost per chat, cost per qualified lead, cost per sale and how quickly chats get a first reply, then shift budget to the ads that sell."
+   ]
+  ],
+  "faqs": [
+   [
+    "Can Zimbabwean businesses run WhatsApp ads?",
+    "Yes. Click-to-WhatsApp ads are bought in Meta Ads Manager and can reach people in Zimbabwe as well as diaspora markets like South Africa, the UK, the US and Australia. Status ads are more limited: Meta's own documentation lists the UK and the European Union among the places where they aren't offered, so we check availability for your audience before launch. The ad spend goes straight to Meta, not through us."
+   ],
+   [
+    "Do we need the WhatsApp Business app or the WhatsApp Business Platform?",
+    "Many smaller businesses start with the free WhatsApp Business app linked to their Facebook Page. Busier teams usually move to the WhatsApp Business Platform through a provider, which allows shared inboxes, CRM connections and sending sales data back to Meta. We'll recommend the option that fits the number of chats you handle."
+   ],
+   [
+    "Can you promote our WhatsApp Channel?",
+    "Not yet. WhatsApp has announced paid promotion for Channels, but its own advertising page still lists it as coming soon, so we don't sell it. We'll tell you when it can be bought in Meta Ads Manager for your audience."
+   ],
+   [
+    "How do you measure whether WhatsApp ads work?",
+    "Meta shows how many chats each ad started. We go further: chats are labelled from enquiry to quote to sale, WhatsApp clicks on your website are tracked in GA4, and your monthly report shows the cost of each sale by campaign and country."
+   ]
+  ],
+  "related": [
+   "email-whatsapp-marketing",
+   "lead-generation-crm",
+   "meta-ads"
+  ]
+ },
+ {
+  "slug": "tiktok-ads",
+  "name": "TikTok Ads",
+  "group": "Social and messaging",
+  "icon": "music",
+  "badge": "Diaspora",
+  "note": "TikTok does not offer self-serve ad accounts to Zimbabwe-registered businesses, and we do not currently offer TikTok ads aimed at Zimbabwe. We run diaspora campaigns through accounts in supported countries.",
+  "short": "TikTok video ads for diaspora and international campaigns, run through an ad account registered in a supported country such as South Africa or the UK.",
+  "title": "TikTok Ads for Diaspora Campaigns",
+  "description": "TikTok ads for diaspora and international brands: Spark Ads, creator videos and pixel tracking, run through an ad account in a supported country.",
+  "h1": "TikTok ads for <span class=\"hl\">diaspora and international</span> campaigns",
+  "intro": "TikTok ads are full-screen, sound-on videos that play between the posts people scroll through, so they need to look and sound like TikTok, not like a TV advert. TikTok doesn't offer self-serve ad accounts to businesses registered in Zimbabwe, so we run TikTok campaigns for diaspora and international brands, through an ad account your business holds in a supported country such as South Africa, the UK, the US or Australia.",
+  "problems": [
+   "You tried to open a TikTok ad account for your Zimbabwean business and found you couldn't.",
+   "Your business abroad serves Zimbabwean customers, but your TikTok posts rarely reach the people most likely to buy.",
+   "Your polished adverts look out of place among casual phone videos, so people swipe straight past.",
+   "You get plenty of views, but can't link any of them to an order, a booking or a sign-up."
+  ],
+  "included": [
+   [
+    "Eligibility and account set-up",
+    "We confirm your business is registered in a country where TikTok offers self-serve ad accounts and help you set up TikTok business and ad accounts in your company's name. You then invite our team into your TikTok business account, so you keep ownership and never share a password."
+   ],
+   [
+    "Campaigns matched to your goal",
+    "TikTok's Reach, Traffic, Video views, Community interaction, Lead generation, App promotion or Sales objective, chosen for the job: awareness for a launch, sign-ups for an event or orders for an online store."
+   ],
+   [
+    "Spark Ads",
+    "We put budget behind your own posts, or creators' posts with their permission, and the likes, comments and follows the ad earns stay on the original video."
+   ],
+   [
+    "Video made for TikTok",
+    "Vertical, sound-on scripts with a strong opening, captions for people watching on mute, and creators who speak to your audience in English, Shona or Ndebele."
+   ],
+   [
+    "Targeting by market",
+    "Location, age, interests and behaviours, device and audiences built from your own data, within the markets your account can reach. Each country gets its own campaign, and we never target by nationality or ethnicity."
+   ],
+   [
+    "TikTok Pixel, Events API and GA4",
+    "The TikTok Pixel and Events API, set up with deduplication, record sign-ups and sales on your site. GA4 and tagged links show how TikTok compares with your other channels, and we judge it on cost per lead or sale in each country, not views."
+   ]
+  ],
+  "steps": [
+   [
+    "Confirm where you can advertise",
+    "We look at where your business is registered and which countries its TikTok ad account can reach, before any budget is planned."
+   ],
+   [
+    "Plan the creative",
+    "We script several short videos for each market, line up creators if they suit you and build a landing page for each country."
+   ],
+   [
+    "Launch and learn",
+    "Ads go live with different hooks and formats, and your strongest organic posts are tested as Spark Ads."
+   ],
+   [
+    "Refresh and scale",
+    "We swap in fresh videos regularly and move budget to the countries and ads that bring in sales."
+   ]
+  ],
+  "faqs": [
+   [
+    "Can a business registered in Zimbabwe advertise on TikTok?",
+    "Not through TikTok's self-serve Ads Manager. As of November 2026, Zimbabwe isn't one of the countries where businesses can open self-serve TikTok ad accounts. We can't confirm whether TikTok's own sales team would open a managed account for a Zimbabwean business, so we don't promise it."
+   ],
+   [
+    "Can TikTok ads reach people in Zimbabwe?",
+    "We don't currently offer TikTok ads aimed at audiences in Zimbabwe, because we have found no evidence that TikTok delivers ads there. To reach customers at home with video, we use Facebook, Instagram, WhatsApp and YouTube ads, and our social media team can still grow your TikTok account with organic content."
+   ],
+   [
+    "We have a company in South Africa or the UK. Can you run TikTok ads for it?",
+    "Yes, if the company is genuinely registered there, the ad account is in its name and TikTok approves it, with the ad spend paid by your company directly to TikTok. The countries an account can target depend on where it's registered, so we check that in TikTok Ads Manager before planning a campaign across several markets. We will never suggest registering a company abroad just to get access."
+   ],
+   [
+    "Can we advertise using creators' videos?",
+    "Yes. With a creator's permission, their post can run as a Spark Ad from their own account, in their own voice. We agree usage, timing and disclosure with the creator in writing before anything goes live."
+   ]
+  ],
+  "related": [
+   "social-media",
+   "meta-ads",
+   "youtube-ads"
+  ]
+ },
+ {
+  "slug": "linkedin-ads",
+  "name": "LinkedIn Ads",
+  "group": "Social and messaging",
+  "icon": "briefcase",
+  "badge": "B2B",
+  "note": "We confirm audience size, ad formats and billing for your target market in LinkedIn Campaign Manager before launch.",
+  "short": "LinkedIn Sponsored Content, Conversation Ads and Lead Gen Forms for B2B, recruitment, education and professional services.",
+  "title": "LinkedIn Ads Management in Harare, Zimbabwe",
+  "description": "LinkedIn ads for Zimbabwean B2B firms, recruiters, colleges and professional services: Sponsored Content, Conversation Ads and Lead Gen Forms.",
+  "h1": "LinkedIn ads that reach <span class=\"hl\">decision-makers and professionals</span>",
+  "intro": "LinkedIn lets you choose who sees your ads by job title, seniority, industry, employer, skills and qualifications. That suits Zimbabwean businesses whose buyers are a small, specific group: mining and engineering suppliers, ICT firms, law and accounting practices, recruiters, and colleges selling professional or postgraduate courses. We plan and manage your LinkedIn campaigns and judge them on meetings, applications and qualified leads, not clicks.",
+  "problems": [
+   "Your Facebook ads bring plenty of enquiries, but very few from the managers and directors who sign contracts.",
+   "Your company page posts mostly reach your own staff and their contacts.",
+   "Advertising a senior or technical vacancy brings in piles of CVs from people who don't fit the role.",
+   "Leads from LinkedIn forms sit in a spreadsheet for days before anyone calls them."
+  ],
+  "included": [
+   [
+    "Sponsored Content",
+    "Single image, video, carousel and event ads in the LinkedIn feed, used to share expertise, launch services, promote events and build your employer brand."
+   ],
+   [
+    "Conversation and Message Ads",
+    "Sponsored messages delivered in LinkedIn messaging, for invitations to events, webinars, consultations and open days. We keep them short, personal and relevant to the reader's role, with a Lead Gen Form or a clear next step."
+   ],
+   [
+    "Lead Gen Forms",
+    "Forms attached to your ads collect enquiries without sending people to a website, and the leads can sync to your CRM so your team can call while interest is high."
+   ],
+   [
+    "Professional targeting",
+    "Job title, function, seniority, industry, company name and size, skills, degrees, fields of study and years of experience, plus Matched Audiences from your contact lists, website visitors and lists of target companies."
+   ],
+   [
+    "Recruitment campaigns",
+    "Job applicants campaigns and Jobs Ads that put your vacancies in front of people with the right skills and experience in the locations you hire from, within LinkedIn's rules against discriminatory targeting."
+   ],
+   [
+    "Insight Tag, Conversions API and CRM",
+    "The LinkedIn Insight Tag and Conversions API record website conversions and offline results, such as qualified leads from your CRM, and GA4 shows how visitors from LinkedIn behave on your site next to those from search, social and email."
+   ]
+  ],
+  "steps": [
+   [
+    "Test the market",
+    "Before any budget is set, we check your market in Campaign Manager: billing, location options and forecast audience size."
+   ],
+   [
+    "Choose the offer and format",
+    "A guide, consultation, event or vacancy, matched to Sponsored Content, Conversation Ads or a Lead Gen Form, depending on what you want people to do."
+   ],
+   [
+    "Launch with tracking in place",
+    "The Insight Tag, conversion events and CRM sync are tested before the first ad runs, so leads are counted from day one."
+   ],
+   [
+    "Optimise for quality",
+    "We refine audiences, bids and messages based on meetings booked, applications and qualified leads, and report what each one cost."
+   ]
+  ],
+  "faqs": [
+   [
+    "Can Zimbabwean businesses advertise on LinkedIn, and can ads target Zimbabwe?",
+    "LinkedIn ads are bought through Campaign Manager, but we don't assume every business and market is supported. Before you commit budget, we check in your own account that your billing details are accepted, that your target locations, such as Zimbabwe, South Africa or the UK, can be selected, and that the forecast audience is large enough to run. Your ad spend is paid directly to LinkedIn."
+   ],
+   [
+    "Which businesses is LinkedIn right for?",
+    "It suits organisations where one new client, hire or student is worth a lot: B2B suppliers, professional firms, recruiters, and colleges offering professional, postgraduate or executive courses. For consumer products, or school places chosen by parents, Facebook, Instagram, WhatsApp and Google are usually a better starting point."
+   ],
+   [
+    "Can LinkedIn ads help us recruit?",
+    "Yes. Job applicants campaigns and Jobs Ads can put a vacancy in front of people by skills, job title and years of experience, including professionals living abroad who may consider coming home. We target by role and experience, never by age, gender, race or ethnicity, in line with LinkedIn's rules."
+   ],
+   [
+    "How do you measure LinkedIn results?",
+    "We track form leads, website enquiries and calls, then follow each lead into your CRM. With the Insight Tag and Conversions API, LinkedIn can also learn from offline results, such as which leads became meetings or deals. Your report shows cost per qualified lead, meeting or application, not just clicks and impressions."
+   ]
+  ],
+  "related": [
+   "lead-generation-crm",
+   "content-marketing",
+   "google-ads"
+  ]
+ }
+]

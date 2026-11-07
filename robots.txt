@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.smartclickmedia.co.zw/sitemap.xml
+Sitemap: https://smartclick.co.zw/sitemap.xml
