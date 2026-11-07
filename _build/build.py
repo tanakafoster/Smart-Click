@@ -206,7 +206,7 @@ def footer():
     li = lambda x: '<li><a href="%s">%s</a></li>' % (url_of(x["slug"]), x["name"])
     ads_col = ""
     if C.AD_PLATFORMS:
-        ads_col = '<div><h4>Paid ads</h4><ul>%s</ul></div>' % "".join(li(p) for p in C.AD_PLATFORMS)
+        ads_col = '<div><h2>Paid ads</h2><ul>%s</ul></div>' % "".join(li(p) for p in C.AD_PLATFORMS)
     return T("""
 <footer class="site-footer">
   <div class="container">
@@ -222,10 +222,10 @@ def footer():
           <li><strong>Serving:</strong> All of Zimbabwe and the diaspora</li>
         </ul>
       </div>
-      <div><h4>Core services</h4><ul>{{core}}</ul></div>
-      <div><h4>More services</h4><ul>{{more}}</ul></div>
+      <div><h2>Core services</h2><ul>{{core}}</ul></div>
+      <div><h2>More services</h2><ul>{{more}}</ul></div>
       {{ads_col}}
-      <div><h4>Company</h4><ul>
+      <div><h2>Company</h2><ul>
         <li><a href="{r}about/index.html">About us</a></li>
         <li><a href="{r}portfolio/index.html">Portfolio</a></li>
         <li><a href="{r}insights/index.html">Insights</a></li>
@@ -833,6 +833,7 @@ def build_portfolio_index():
     body += T("""
 <section class="section"><div class="container">
   <p class="notice">{{note}}</p>
+  <h2 class="sr-only">Example projects</h2>
   <div class="grid grid-3" style="margin-top:32px">{{cards}}</div>
 </div></section>
 {{cta}}""", note=EXAMPLE_NOTE, cards="".join(portfolio_card(p) for p in C.PORTFOLIO),
@@ -889,6 +890,7 @@ def build_insights_index():
                      [("Insights", None)], buttons=False)
     body += T("""
 <section class="section"><div class="container">
+  <h2 class="sr-only">Latest articles</h2>
   <div class="grid grid-3">{{cards}}</div>
 </div></section>
 {{cta}}""", cards="".join(article_card(a) for a in C.ARTICLES), cta=cta_band())
@@ -939,6 +941,7 @@ def build_locations_index():
                      [("Areas we serve", None)])
     body += T("""
 <section class="section"><div class="container">
+  <h2 class="sr-only">Cities we serve</h2>
   <div class="grid grid-3">{{cards}}
     <a class="card service-card reveal" href="{r}index.html"><div class="icon">{{pin}}</div><h3>Harare (our home base)</h3><p>Our team is in Harare, serving the CBD, the suburbs and businesses across the capital and Chitungwiza.</p><span class="more">Learn more →</span></a>
   </div>
@@ -1053,6 +1056,7 @@ def build_industries():
                      [("Industries", None)])
     body += T("""
 <section class="section"><div class="container">
+  <h2 class="sr-only">Industries we work with</h2>
   <div class="grid grid-3">{{cards}}</div>
 </div></section>
 <section class="section bg-soft"><div class="container split">
