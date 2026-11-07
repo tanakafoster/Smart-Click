@@ -1,0 +1,27 @@
+# Smart Click Media
+
+> Digital marketing agency based in Harare, Zimbabwe, serving businesses across all 10 provinces and the Zimbabwean diaspora. Phone / WhatsApp: 0771 269 979 (+263 77 126 9979).
+
+## Services
+
+- [Digital Marketing](https://www.smartclickmedia.co.zw/services/digital-marketing/): One joined-up growth plan across search, social, ads, email and your website, built around sales, not likes.
+- [Website Development](https://www.smartclickmedia.co.zw/services/website-development/): Fast, mobile-first websites that load on any network in Zimbabwe and are built to win enquiries.
+- [SEO](https://www.smartclickmedia.co.zw/services/seo/): Rank on page one of Google for the searches your customers make, and stay there.
+- [Paid Ads](https://www.smartclickmedia.co.zw/services/paid-ads/): Google, Meta, TikTok, YouTube and LinkedIn ads managed for profit, not vanity clicks.
+- [AEO (AI Search Optimisation)](https://www.smartclickmedia.co.zw/services/aeo/): Get your brand recommended by ChatGPT, Gemini, Perplexity and Google AI Overviews.
+- [Social Media Management](https://www.smartclickmedia.co.zw/services/social-media/): Strategy, content, community management and social listening across Facebook, Instagram, TikTok and LinkedIn.
+- [Local SEO & Google Business Profile](https://www.smartclickmedia.co.zw/services/local-seo/): Show up on Google Maps and "near me" searches in Harare, Bulawayo and every town you serve.
+- [E-commerce](https://www.smartclickmedia.co.zw/services/ecommerce/): Online stores with local payments, plus the ads, emails and automations that make them profitable.
+- [Email & WhatsApp Marketing](https://www.smartclickmedia.co.zw/services/email-whatsapp-marketing/): Newsletters, lead nurturing and automated WhatsApp and email flows that sell while you sleep.
+- [Lead Generation & CRM](https://www.smartclickmedia.co.zw/services/lead-generation-crm/): Lead-gen systems, call tracking and CRM setup (such as Pipedrive or HubSpot) that connect marketing to sales.
+- [Conversion Rate Optimisation](https://www.smartclickmedia.co.zw/services/cro/): UX audits and A/B testing that turn more of your existing visitors into customers.
+- [Analytics & Tracking](https://www.smartclickmedia.co.zw/services/analytics/): GA4, Google Tag Manager, conversion tracking and live dashboards so every decision is backed by data.
+- [Content Marketing & Link Building](https://www.smartclickmedia.co.zw/services/content-marketing/): Articles, guides, video scripts and digital PR that build authority with Google, AI and your buyers.
+- [Hosting, Maintenance & Speed](https://www.smartclickmedia.co.zw/services/hosting-maintenance/): Secure hosting, backups, updates and speed optimisation so your website never lets you down.
+
+## Company
+
+- [About](https://www.smartclickmedia.co.zw/about/): who we are and how we work
+- [Industries](https://www.smartclickmedia.co.zw/industries/): sectors we serve in Zimbabwe
+- [FAQ](https://www.smartclickmedia.co.zw/faq/): common questions
+- [Contact](https://www.smartclickmedia.co.zw/contact/): call or WhatsApp 0771 269 979
