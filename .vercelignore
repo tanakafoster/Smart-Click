@@ -1,0 +1,3 @@
+# Files that are only needed to edit and build the site, not to serve it
+_build
+README.md
