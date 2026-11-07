@@ -156,7 +156,7 @@ def item_of(slug):
 def header(active):
     services = "".join(
         '<a href="%s"><span class="mi">%s</span><span>%s<em>%s</em></span></a>'
-        % (url_of(s["slug"]), icon(s["icon"]), s["name"], clip(s["short"], 60))
+        % (url_of(s["slug"]), icon(s["icon"]), s["name"], s.get("menu") or clip(s["short"], 60))
         for s in C.SERVICES)
     platforms = "".join(
         '<a href="%s"><span class="mi">%s</span><span>%s</span></a>' % (url_of(p["slug"]), icon(p["icon"]), p["name"])
@@ -251,7 +251,7 @@ def footer():
 
 def org_schema():
     offers = [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": s["name"]}} for s in C.SERVICES]
-    offers += [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": p["name"]}} for p in C.AD_PLATFORMS]
+    offers += [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": p["name"]}, "areaServed": [{"@type": "Country", "name": c} for c in p.get("area_served") or [C.COUNTRY]]} for p in C.AD_PLATFORMS]
     return {
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "ProfessionalService"],
@@ -263,7 +263,7 @@ def org_schema():
         "image": C.SITE_URL + "/assets/img/og-image.svg",
         "telephone": C.PHONE_INTL,
         "email": C.EMAIL,
-        "description": "Digital marketing agency in Harare, Zimbabwe offering digital marketing, website development, SEO, AEO, paid ads on every major platform, Google Analytics, social media and e-commerce to businesses across Zimbabwe.",
+        "description": "Digital marketing agency in Harare, Zimbabwe offering digital marketing, website development, SEO, AEO, paid ads across the major platforms, Google Analytics, social media and e-commerce to businesses across Zimbabwe.",
         "address": {"@type": "PostalAddress", "addressLocality": C.CITY, "addressRegion": "Harare", "addressCountry": "ZW"},
         "openingHoursSpecification": [{
             "@type": "OpeningHoursSpecification",
@@ -302,7 +302,7 @@ def page(path, title, description, body, active="", schemas=None, root=None, ind
         schemas.append(breadcrumb_schema(crumbs))
     ld = "\n".join('<script type="application/ld+json">%s</script>' % json.dumps(s, ensure_ascii=False) for s in schemas)
     # Keep titles near the ~60 character display limit: only add the brand when there is room
-    full_title = title if (C.BRAND in title or len(title) > 44 or " | " in title) else "%s | %s" % (title, C.BRAND)
+    full_title = title if (C.BRAND in title or len(title) > 40 or " | " in title) else "%s | %s" % (title, C.BRAND)
     ga = T(GA_SNIPPET, id=C.GA_MEASUREMENT_ID) if C.GA_MEASUREMENT_ID else ""
     html = T("""<!doctype html>
 <html lang="en-ZW">
@@ -392,7 +392,7 @@ def card_for(slug, badge=None):
     elif badge:
         b = '<span class="badge">%s</span>' % badge
     title = x.get("name") or x.get("city")
-    short = x.get("short") or x.get("summary") or clip(x.get("intro", ""), 150)
+    short = x.get("short") or x.get("summary") or clip(x.get("intro", ""), 200)
     return T("""<a class="card service-card reveal" href="{{href}}">{{badge}}
   <div class="icon">{{icon}}</div><h3>{{name}}</h3><p>{{short}}</p><span class="more">Learn more →</span></a>""",
              href=url_of(slug), badge=b, icon=icon(x.get("icon", "map")), name=title, short=short)
@@ -405,7 +405,7 @@ def faq_block(faqs):
 
 def cities_block():
     return '<div class="cities">' + "".join(
-        '<span class="%s">%s</span>' % ("hq" if c == C.CITY else "", c + (" (HQ)" if c == C.CITY else ""))
+        '<span class="%s">%s</span>' % ("hq" if c == C.CITY else "", c + (" (our base)" if c == C.CITY else ""))
         for c in C.CITIES) + "</div>"
 
 
@@ -430,13 +430,13 @@ def page_hero(eyebrow, h1, lead, crumbs, buttons=True, extra=""):
 PROCESS = [
     ("Free strategy session", "We learn about your business, goals and numbers, and look at what you're doing now."),
     ("Audit & plan", "You get an honest audit and a 90-day plan with clear targets, budgets and channels."),
-    ("Launch", "Campaigns, pages and tracking go live on a launch date we agree together at the start."),
+    ("Launch", "Campaigns, pages and tracking go live on a launch date we agree at the start."),
     ("Report & grow", "Ongoing optimisation, a plain-English monthly report and a regular review call."),
 ]
 
 PRINCIPLES = [
     ("shield", "Your accounts, your data", "Ad accounts, analytics, website and domain are set up in your business's name. You can see every dollar spent and every task done."),
-    ("users", "Specialists who stay close", "The people who plan your strategy are the people who run it day to day, so nothing gets lost in hand-overs."),
+    ("users", "Specialists who stay close", "The people who plan your strategy are the people who run it day to day, so nothing gets lost in handovers."),
     ("chart", "Measured in customers", "Our reports lead with enquiries, sales and revenue from ads. Likes and impressions come second."),
     ("award", "Careful, thorough work", "Solid keyword research, clean tracking and properly tested creative: the groundwork that makes campaigns pay."),
     ("message", "Local know-how", "We understand Zimbabwean buyers, mobile-first browsing, WhatsApp culture and the diaspora market."),
@@ -497,7 +497,7 @@ def build_home():
     ads_grid = ""
     if C.AD_PLATFORMS:
         ads_grid = '<div class="platform-chips">' + "".join(
-            '<a class="pchip reveal" href="%s"><span class="mi">%s</span>%s</a>' % (url_of(p["slug"]), icon(p["icon"]), p["name"])
+            '<a class="pchip reveal" href="%s"><span class="mi">%s</span>%s%s</a>' % (url_of(p["slug"]), icon(p["icon"]), p["name"], " (diaspora)" if p.get("badge") == "Diaspora" else "")
             for p in C.AD_PLATFORMS) + "</div>"
     portfolio_sec = ""
     if C.PORTFOLIO:
@@ -527,23 +527,23 @@ def build_home():
     <div>
       <span class="eyebrow">Digital marketing agency · Harare, Zimbabwe · Open 24/7</span>
       <h1>Get found. Get chosen. <span class="hl">Grow across Zimbabwe.</span></h1>
-      <p class="lead">Smart Click Media helps Zimbabwean businesses win more customers through SEO, AI search (AEO), paid ads on every major platform, Google Analytics, social media and websites built to sell. Based in Harare, working with brands in every province.</p>
+      <p class="lead">Smart Click Media helps Zimbabwean businesses win more customers through SEO, AI search (AEO), paid ads on the major platforms, Google Analytics, social media and websites built to sell. Based in Harare, serving every province.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="{r}contact/index.html">Get my free strategy session</a>
         <a class="btn btn-outline" href="tel:{{tel}}">Call {{phone}}</a>
       </div>
       <div class="hero-badges">
         <span class="chip"><b>●</b> SEO &amp; AEO</span>
-        <span class="chip"><b>●</b> Google, Meta, LinkedIn &amp; ChatGPT ads</span>
+        <span class="chip"><b>●</b> Google, Meta, YouTube &amp; LinkedIn ads</span>
         <span class="chip"><b>●</b> Google Analytics</span>
         <span class="chip"><b>●</b> Websites &amp; e-commerce</span>
       </div>
     </div>
     <div class="hero-card" aria-hidden="true">
       <div class="hc-top"><span class="dots"><i></i><i></i><i></i></span><span>Illustration: where buyers find you</span></div>
-      <div class="hc-search">{{search}} digital marketing agency in Harare</div>
+      <div class="hc-search">{{search}} solar installers in Harare</div>
       <div class="hc-result"><span class="tag">Search result</span><b>Your Business · Harare, Zimbabwe</b><small>yourbusiness.co.zw</small><br>Call or WhatsApp today for a free quote…</div>
-      <div class="hc-ai"><strong>AI answer:</strong> For this in Zimbabwe, one option to consider is <strong>Your Business</strong>, based in Harare and serving clients nationwide…</div>
+      <div class="hc-ai"><strong>AI answer:</strong> For solar installers in Harare, one option to consider is <strong>Your Business</strong>, which has clear prices and recent reviews…</div>
       <div class="hc-bars"><i style="height:30%"></i><i style="height:42%"></i><i style="height:38%"></i><i style="height:55%"></i><i style="height:63%"></i><i style="height:72%"></i><i style="height:86%"></i><i style="height:100%"></i></div>
     </div>
   </div>
@@ -556,7 +556,7 @@ def build_home():
     <div class="center">
       <span class="eyebrow">What we do</span>
       <h2>Six core services. One goal: more customers.</h2>
-      <p class="lead">Whether people find you on Google, ask an AI assistant, scroll Facebook or land on your website, we make sure you show up, get chosen, and can see exactly what it's worth.</p>
+      <p class="lead">Whether people find you on Google, ask an AI assistant, scroll Facebook or land on your website, we help you show up, get chosen and see exactly what it's worth.</p>
     </div>
     <div class="grid grid-3" style="margin-top:48px">{{core}}
       <a class="card more-card reveal" href="{r}services/index.html">
@@ -574,7 +574,7 @@ def build_home():
     <div class="split">
       <div>
         <span class="eyebrow">Paid ads</span>
-        <h2>All the major ad platforms, <span class="hl">one accountable team</span></h2>
+        <h2>The major ad platforms, <span class="hl">one accountable team</span></h2>
         <p class="lead">Search, social, video, messaging, professional networks and the new ad slots inside AI assistants. We plan your budget across the platforms that suit your customers and are open to your business, and track every campaign through to enquiries and sales.</p>
         <div class="btn-row"><a class="btn btn-primary" href="{r}services/paid-ads/index.html">Explore paid ads</a></div>
       </div>
@@ -588,7 +588,7 @@ def build_home():
     <div class="panel reveal">
       <span class="eyebrow">AI search</span>
       <h2>Your customers now ask AI. Does it mention you?</h2>
-      <p>Instead of scrolling through search results, many buyers ask ChatGPT, Gemini, Copilot or Google's AI answers for a recommendation, then contact the one or two names they're given.</p>
+      <p>Instead of scrolling through search results, many buyers ask ChatGPT, Gemini or Copilot for a recommendation, or read Google's AI answer, then contact the one or two names they're given.</p>
       <p>Our AEO service makes your business easy for those tools to understand and trust, then checks every month how often you're named.</p>
       <div class="btn-row"><a class="btn btn-dark" href="{r}services/aeo/index.html">Explore AEO</a><a class="btn btn-outline btn-ink" href="{r}services/seo/index.html">Our SEO service</a></div>
     </div>
@@ -632,7 +632,7 @@ def build_home():
   <div class="container center">
     <span class="eyebrow">Based in Harare. Serving the whole nation.</span>
     <h2>From Harare to Victoria Falls, and the diaspora</h2>
-    <p class="lead">Our team works from Harare, and our clients are everywhere. We run campaigns targeting every province of Zimbabwe, plus Zimbabweans living in South Africa, the UK, the US and Australia.</p>
+    <p class="lead">Our team works from Harare and can work with businesses anywhere in Zimbabwe. We can run campaigns for every province, and reach Zimbabweans living in South Africa, the UK, the US and Australia through location, interests and your own customer lists.</p>
     {{cities}}
     <p style="margin-top:28px"><a class="btn btn-outline" href="{r}locations/index.html">Areas we serve</a></p>
   </div>
@@ -651,7 +651,7 @@ def build_home():
 {{insights}}
 <section class="section">
   <div class="container">
-    <div class="center"><span class="eyebrow">FAQ</span><h2>Questions we get asked a lot</h2></div>
+    <div class="center"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
     <div style="margin-top:40px">{{faq}}</div>
     <p class="center" style="margin-top:24px"><a href="{r}faq/index.html">See all FAQs →</a></p>
   </div>
@@ -666,7 +666,7 @@ def build_home():
              cities=cities_block(), i_cal=icon("calendar"), i_flag=icon("flag"), i_chart=icon("chart"),
              insights=insights_sec, faq=faq_block(C.FAQS_GENERAL[:5]), cta=cta_band())
     page("index.html", "Smart Click Media | Digital Marketing Agency in Harare, Zimbabwe",
-         "Harare digital marketing agency for all of Zimbabwe, open 24/7: SEO, AEO, Google, Meta, LinkedIn and ChatGPT ads, analytics and websites. Call 0771 269 979.",
+         "Harare digital marketing agency for all of Zimbabwe, open 24/7: SEO, AEO, Google, Meta, YouTube and LinkedIn ads, analytics and websites. Call 0771 269 979.",
          body, "home", [faq_schema(C.FAQS_GENERAL[:5])])
 
 
@@ -674,13 +674,18 @@ def build_home():
 # Services and ad-platform pages
 # ---------------------------------------------------------------------------
 def lower_name(x):
+    """Service or platform name for use inside a sentence-case heading, e.g. 'How we deliver digital marketing'."""
     n = x["name"]
-    if x.get("group"):  # ad platforms are proper names
-        return n
-    keep = ("SEO", "AEO", "CRO", "Google", "Meta", "TikTok", "LinkedIn", "YouTube", "Microsoft", "ChatGPT", "WhatsApp", "E-commerce")
-    if any(n.startswith(k) for k in keep) or x["slug"] in ("seo", "aeo", "cro"):
-        return n
-    return n[0].lower() + n[1:]
+    if x.get("group"):  # ad platforms: keep brand names, lower-case the generic words
+        if n in ("Google Ads", "Microsoft Advertising"):
+            return n
+        return n.replace("Programmatic & Display", "programmatic & display").replace(" Ads", " ads")
+    if x["slug"] == "aeo":
+        return "AEO"
+    s = n.lower()
+    for proper in ("SEO", "CRM", "WhatsApp", "Google Business Profile", "Google Analytics"):
+        s = s.replace(proper.lower(), proper)
+    return s
 
 
 def platforms_section():
@@ -698,7 +703,7 @@ def platforms_section():
     return T("""
 <section class="section bg-soft" id="platforms">
   <div class="container">
-    <div class="center"><span class="eyebrow">Platforms we manage</span><h2>All the major platforms, in one plan</h2>
+    <div class="center"><span class="eyebrow">Platforms we manage</span><h2>The major platforms, in one plan</h2>
     <p class="lead">Pick one platform or let us build a mix. Each page explains what we run there, who it suits, where it is available and what to expect.</p></div>
     <div class="platform-groups">{{groups}}</div>
   </div>
@@ -724,7 +729,7 @@ def build_service(s, parent=None):
     note = ""
     if s.get("note"):
         note = '<p class="hero-note">%s %s</p>' % (icon("clock"), s["note"])
-    body = page_hero("%s · Harare, Zimbabwe" % s["name"], s["h1"], s["intro"], crumbs, extra=note)
+    body = page_hero("%s · %s" % (s["name"], "Diaspora campaigns" if s.get("badge") == "Diaspora" else "Harare, Zimbabwe"), s["h1"], s["intro"], crumbs, extra=note)
     if s["slug"] == "paid-ads":
         body += platforms_section()
     body += T("""
@@ -774,12 +779,12 @@ def build_service(s, parent=None):
 </section>
 {{cta}}
 """, problems=problems, tel=C.PHONE_TEL, phone=C.PHONE_LOCAL, included=included,
-              inc_title=s.get("included_title") or "Our %s service" % lower_name(s), lname=lower_name(s), name=s["name"],
+              inc_title=s.get("included_title") or "Our %s service" % lower_name(s), lname=lower_name(s), name=lower_name(s)[:1].upper() + lower_name(s)[1:],
               steps=steps_html(s["steps"]), faq=faq_block(s["faqs"]), related=related,
               cta=cta_band("Let's talk about %s for your business" % lower_name(s)))
     service_ld = {"@context": "https://schema.org", "@type": "Service", "name": s["name"], "serviceType": s["name"],
                   "description": strip_tags(s["short"]), "provider": {"@id": C.SITE_URL + "/#organization"},
-                  "areaServed": {"@type": "Country", "name": C.COUNTRY}}
+                  "areaServed": [{"@type": "Country", "name": c} for c in s["area_served"]] if s.get("area_served") else {"@type": "Country", "name": C.COUNTRY}}
     page(path, s["title"], s.get("description") or clip(s["intro"]), body, "ads" if (parent or s["slug"] == "paid-ads") else "services",
          [service_ld, faq_schema(s["faqs"])], crumbs=crumb_ld)
 
@@ -790,15 +795,15 @@ def build_services_index():
     ads = ""
     if C.AD_PLATFORMS:
         ads = T("""<section class="section"><div class="container">
-  <div class="center"><span class="eyebrow">Paid ads platforms</span><h2>Advertising, wherever your customers are</h2></div>
+  <div class="center"><span class="eyebrow">Paid ads platforms</span><h2>Advertising on the platforms your customers use</h2></div>
   <div class="grid grid-3" style="margin-top:40px">{{cards}}</div>
 </div></section>""", cards="".join(card_for(p["slug"], badge=p.get("badge", "")) for p in C.AD_PLATFORMS))
     body = page_hero("Our services", "Every service you need to <span class=\"hl\">grow online</span> in Zimbabwe",
-                     "%d specialist services and %d ad platforms, one joined-up team. Start with the one you need most, and we'll connect it to everything else."
+                     "%d services and %d ad platforms, one joined-up team. Start with the one you need most, and we'll connect it to everything else."
                      % (len(C.SERVICES), len(C.AD_PLATFORMS)), [("Services", None)])
     body += T("""
 <section class="section"><div class="container">
-  <div class="center"><span class="eyebrow">Core services</span><h2>Where most clients start</h2></div>
+  <div class="center"><span class="eyebrow">Core services</span><h2>Where most businesses start</h2></div>
   <div class="grid grid-3" style="margin-top:40px">{{core}}</div>
 </div></section>
 <section class="section bg-soft"><div class="container">
@@ -813,7 +818,7 @@ def build_services_index():
 {{cta}}""", core="".join(card_for(s["slug"]) for s in core), rest="".join(card_for(s["slug"]) for s in rest), ads=ads,
               process=steps_html(PROCESS), cta=cta_band())
     page("services/index.html", "Digital Marketing Services in Zimbabwe",
-         "SEO, AEO, paid ads on every platform, Google Analytics, websites, social media, e-commerce and WhatsApp marketing from Smart Click Media in Harare.",
+         "SEO, AEO, paid ads on the major platforms, Google Analytics, websites, social media, e-commerce and WhatsApp marketing from Smart Click Media in Harare.",
          body, "services", crumbs=[("Home", ""), ("Services", "services/")])
 
 
@@ -837,7 +842,7 @@ def build_portfolio_index():
   <div class="grid grid-3" style="margin-top:32px">{{cards}}</div>
 </div></section>
 {{cta}}""", note=EXAMPLE_NOTE, cards="".join(portfolio_card(p) for p in C.PORTFOLIO),
-              cta=cta_band("Want results like these for your business?", "Tell us about your goals, and we'll show you how we'd plan your project. Real client work can be added here as projects complete."))
+              cta=cta_band("Want a similar plan for your business?", "Tell us about your goals, and we'll show you how we'd plan your project."))
     page("portfolio/index.html", "Portfolio | Example Digital Marketing Projects",
          "Example website, SEO, AEO and paid ads projects showing how Smart Click Media approaches work for Zimbabwean businesses.",
          body, "portfolio", crumbs=[("Home", ""), ("Portfolio", "portfolio/")])
@@ -937,18 +942,18 @@ def build_article(a):
 def build_locations_index():
     cards = "".join(card_for(l["slug"]) for l in C.LOCATIONS)
     body = page_hero("Areas we serve", "Digital marketing for businesses <span class=\"hl\">across Zimbabwe</span>",
-                     "We're based in Harare and work with businesses in every province, online, on WhatsApp and by phone, any time of day.",
+                     "We're based in Harare and can work with businesses in every province, online, on WhatsApp and by phone, any time of day.",
                      [("Areas we serve", None)])
     body += T("""
 <section class="section"><div class="container">
   <h2 class="sr-only">Cities we serve</h2>
   <div class="grid grid-3">{{cards}}
-    <a class="card service-card reveal" href="{r}index.html"><div class="icon">{{pin}}</div><h3>Harare (our home base)</h3><p>Our team is in Harare, serving the CBD, the suburbs and businesses across the capital and Chitungwiza.</p><span class="more">Learn more →</span></a>
+    <a class="card service-card reveal" href="{r}contact/index.html"><div class="icon">{{pin}}</div><h3>Harare (our home base)</h3><p>Our team is in Harare, serving businesses in the CBD, the suburbs, Chitungwiza and across the capital.</p><span class="more">Talk to us →</span></a>
   </div>
 </div></section>
 <section class="section bg-dark"><div class="container center">
   <span class="eyebrow">Towns and cities</span>
-  <h2>We work with businesses in all ten provinces</h2>
+  <h2>We can work with businesses in all ten provinces</h2>
   <p class="lead">{{provinces}}.</p>
   {{cities}}
 </div></section>
@@ -992,7 +997,7 @@ def build_location(l):
   <div style="margin-top:32px">{{faq}}</div>
 </div></section>
 {{cta}}""", city=l["city"], context=context, phone=C.PHONE_LOCAL, industries=industries, focus=focus,
-              faq=faq_block(l["faqs"]), cta=cta_band("Growing a business in %s? Let's talk." % l["city"]))
+              faq=faq_block(l["faqs"]), cta=cta_band("Growing a business in %s? Let's talk." % l["city"], "Book a free strategy session by phone, WhatsApp or video call. We'll look at how customers in %s find you today and give you an honest plan, whether or not you hire us." % l["city"]))
     page("locations/%s/index.html" % l["slug"], l["title"], clip(l["intro"]), body, "", [faq_schema(l["faqs"])],
          crumbs=[("Home", ""), ("Areas we serve", "locations/"), (l["city"], "locations/%s/" % l["slug"])])
 
@@ -1001,7 +1006,7 @@ def build_location(l):
 # Company pages
 # ---------------------------------------------------------------------------
 def build_about():
-    body = page_hero("About Smart Click Media", "A Harare agency built on <span class=\"hl\">results you can see</span>",
+    body = page_hero("About Smart Click Media", "A Harare agency built for <span class=\"hl\">results you can measure</span>",
                      "Smart Click Media exists because too many Zimbabwean businesses were paying for marketing they couldn't measure. We set out to build the kind of agency we'd want to hire ourselves.",
                      [("About", None)])
     body += T("""
@@ -1009,8 +1014,8 @@ def build_about():
   <div class="reveal">
     <span class="eyebrow">Our story</span>
     <h2>Digital marketing, done properly, for Zimbabwe</h2>
-    <p>Smart Click Media is a digital marketing agency based in Harare. We help businesses across Zimbabwe, from start-ups to established national brands, get found online, get chosen over their competitors and grow their revenue.</p>
-    <p>We combine specialist skills in SEO, AI search, paid advertising, analytics, websites and social media with a deep understanding of the Zimbabwean market: how people search, how they shop on their phones, how much they rely on WhatsApp, and how to reach the millions of Zimbabweans living abroad.</p>
+    <p>Smart Click Media is a digital marketing agency based in Harare. We help businesses across Zimbabwe, from start-ups to established companies, get found online, get chosen over their competitors and grow their revenue.</p>
+    <p>We combine specialist skills in SEO, AI search, paid advertising, analytics, websites and social media with close knowledge of the Zimbabwean market. We know how people here search, how they shop on their phones, how much they rely on WhatsApp, and how to reach Zimbabweans living abroad.</p>
     <p>Every campaign we run is judged on one question: is it growing your business?</p>
   </div>
   <div class="panel-dark reveal">
@@ -1035,15 +1040,15 @@ def build_about():
 </div></section>
 <section class="section bg-dark"><div class="container center">
   <span class="eyebrow">Where we work</span>
-  <h2>Harare headquarters, national reach</h2>
-  <p class="lead">We work with clients in all ten provinces: {{provinces}}. Most of our collaboration happens on WhatsApp, video calls and email, and we're happy to meet in person in Harare.</p>
+  <h2>Based in Harare, working nationwide</h2>
+  <p class="lead">We can work with businesses in all ten provinces: {{provinces}}. Most of our collaboration happens on WhatsApp, video calls and email, and we're happy to meet in person in Harare.</p>
   {{cities}}
 </div></section>
 {{cta}}""", principles="".join('<div class="card reveal"><div class="icon">%s</div><h3>%s</h3><p>%s</p></div>' % (icon(i), t, d)
                                 for i, t, d in PRINCIPLES),
               process=steps_html(PROCESS), provinces=", ".join(C.PROVINCES[:-1]) + " and " + C.PROVINCES[-1],
               cities=cities_block(), cta=cta_band())
-    page("about/index.html", "About Us | Digital Marketing Agency in Harare",
+    page("about/index.html", "About Smart Click Media | Digital Marketing Agency, Harare",
          "Smart Click Media is a Harare digital marketing agency, open 24/7, helping businesses across Zimbabwe grow with SEO, AEO, paid ads, analytics and websites.",
          body, "about", crumbs=[("Home", ""), ("About", "about/")])
 
@@ -1063,7 +1068,7 @@ def build_industries():
   <div class="reveal">
     <span class="eyebrow">Diaspora marketing</span>
     <h2>Reach Zimbabweans wherever they live</h2>
-    <p>Millions of Zimbabweans live in South Africa, the UK, the US, Australia and beyond, and many of them buy property, pay school fees, send groceries and invest back home. We plan campaigns around when and where they spend time online, with offers that make buying from abroad simple.</p>
+    <p>Many Zimbabweans living in South Africa, the UK, the US, Australia and beyond buy property, pay school fees, send groceries and invest back home. We plan campaigns around when and where they spend time online, with offers that make buying from abroad simple.</p>
     <a class="btn btn-dark" href="{r}services/paid-ads/index.html">See our paid ads service</a>
   </div>
   <div class="panel reveal" style="background:#fff">
@@ -1078,7 +1083,7 @@ def build_industries():
     </ul>
   </div>
 </div></section>
-{{cta}}""", cards=cards, cta=cta_band("Don't see your industry?", "Chances are we've worked on something similar. Tell us what you do, and we'll explain how we'd approach it."))
+{{cta}}""", cards=cards, cta=cta_band("Don't see your industry?", "Tell us what you do, and we'll explain how we'd approach it."))
     page("industries/index.html", "Industries We Serve in Zimbabwe",
          "Digital marketing for retail, tourism, real estate, education, healthcare, agriculture, mining, solar, NGOs and more across Zimbabwe.",
          body, "", crumbs=[("Home", ""), ("Industries", "industries/")])
@@ -1121,13 +1126,13 @@ def build_contact():
     <div class="contact-card"><div class="icon icon-wa">{{i_msg}}</div><div><h3>WhatsApp</h3><p><a href="{{wa}}" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p></div></div>
     <div class="contact-card"><div class="icon">{{i_mail}}</div><div><h3>Email</h3><p><a href="mailto:{{email}}">{{email}}</a></p></div></div>
     <div class="contact-card"><div class="icon">{{i_clock}}</div><div><h3>Hours</h3><p>{{hours_long}}</p></div></div>
-    <div class="contact-card"><div class="icon">{{i_pin}}</div><div><h3>Office</h3><p>Harare, Zimbabwe. Serving clients nationwide and in the diaspora.</p></div></div>
+    <div class="contact-card"><div class="icon">{{i_pin}}</div><div><h3>Office</h3><p>Harare, Zimbabwe. Serving all of Zimbabwe and the diaspora.</p></div></div>
     <div class="panel" style="margin-top:24px">
       <h3>What happens next?</h3>
       <ul class="checklist">
         <li>We'll get in touch to arrange a free strategy session</li>
-        <li>We look at your website, ads and online presence beforehand</li>
-        <li>You get honest recommendations, with no pressure to sign</li>
+        <li>We'll look at your website, ads and online presence before we talk</li>
+        <li>You'll get honest recommendations, with no pressure to sign</li>
       </ul>
     </div>
   </div>
@@ -1152,7 +1157,7 @@ def build_contact():
         <option value="">Prefer not to say</option><option>Under $300</option><option>$300 to $1,000</option><option>$1,000 to $3,000</option><option>$3,000 to $10,000</option><option>$10,000+</option></select></div>
       <div><label for="f-msg">Tell us about your goals</label><textarea id="f-msg" name="message" data-label="Message" placeholder="What would you like to achieve in the next 6 to 12 months?"></textarea></div>
       <div class="btn-row" style="margin-top:4px">
-        <button class="btn btn-primary" type="submit" value="whatsapp">Send via WhatsApp</button>
+        <button class="btn btn-primary" type="submit" value="whatsapp">Send by WhatsApp</button>
         <button class="btn btn-outline btn-ink" type="submit" value="email">Send by email</button>
       </div>
       <p class="form-success form-note" role="status" hidden>Thanks! Your message should have opened, ready to send. If it didn't, call {{phone}} or email {{email}}.</p>
@@ -1161,12 +1166,12 @@ def build_contact():
 </div></section>
 <section class="section bg-dark"><div class="container center">
   <span class="eyebrow">Service area</span>
-  <h2>We work with businesses all over Zimbabwe</h2>
+  <h2>We can work with businesses all over Zimbabwe</h2>
   {{cities_block}}
 </div></section>""", i_phone=icon("phone"), i_msg=icon("message"), i_mail=icon("mail"), i_clock=icon("clock"), i_pin=icon("pin"),
               tel=C.PHONE_TEL, phone=C.PHONE_LOCAL, intl=C.PHONE_INTL, wa=wa_link(), email=C.EMAIL, hours_long=C.HOURS_LONG,
               cities="".join("<option>%s</option>" % c for c in C.CITIES), options=options, cities_block=cities_block())
-    page("contact/index.html", "Contact Us | Call 0771 269 979, Open 24/7",
+    page("contact/index.html", "Contact Smart Click Media | Call 0771 269 979, Open 24/7",
          "Contact Smart Click Media in Harare, Zimbabwe. Open 24/7: call or WhatsApp 0771 269 979 or email info@smartclick.co.zw for a free strategy session.",
          body, "contact", crumbs=[("Home", ""), ("Contact", "contact/")])
 

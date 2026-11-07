@@ -6,15 +6,15 @@
 
 - [Digital Marketing](https://smartclick.co.zw/services/digital-marketing/): One joined-up growth plan across search, social, ads, email and your website, built around sales, not likes.
 - [Website Development](https://smartclick.co.zw/services/website-development/): Fast, mobile-first websites that load on any network in Zimbabwe and are built to win enquiries.
-- [SEO](https://smartclick.co.zw/services/seo/): Rank on page one of Google for the searches your customers make, and stay there.
-- [AEO (AI Search Optimisation)](https://smartclick.co.zw/services/aeo/): Get your business named when people ask ChatGPT, Gemini, Copilot, Perplexity or Google's AI for a recommendation.
-- [Paid Ads](https://smartclick.co.zw/services/paid-ads/): Google, YouTube, Meta, WhatsApp, TikTok, LinkedIn, Microsoft and ChatGPT ads, planned and managed by one team and judged on the customers they bring in.
+- [SEO](https://smartclick.co.zw/services/seo/): Help your business rank higher on Google for the searches your customers make.
+- [AEO (AI Search Optimisation)](https://smartclick.co.zw/services/aeo/): Help ChatGPT, Gemini, Copilot, Perplexity and Google's AI find, understand and recommend your business.
+- [Paid Ads](https://smartclick.co.zw/services/paid-ads/): Google, YouTube, Meta, WhatsApp, LinkedIn and Microsoft ads, plus TikTok and ChatGPT ads for diaspora campaigns, planned and managed by one team and judged on the customers they bring in.
 - [Google Analytics & Tracking](https://smartclick.co.zw/services/google-analytics/): Google Analytics 4, Tag Manager and conversion tracking set up properly, so you can see which marketing brings in customers.
 - [Social Media Management](https://smartclick.co.zw/services/social-media/): Strategy, content, community management and social listening across Facebook, Instagram, TikTok and LinkedIn.
 - [Local SEO & Google Business Profile](https://smartclick.co.zw/services/local-seo/): Show up on Google Maps and "near me" searches in Harare, Bulawayo and every town you serve.
 - [E-commerce](https://smartclick.co.zw/services/ecommerce/): Online stores with local payments, plus the ads, emails and automations that make them profitable.
-- [Email & WhatsApp Marketing](https://smartclick.co.zw/services/email-whatsapp-marketing/): Newsletters, lead nurturing and automated WhatsApp and email flows that sell while you sleep.
-- [Lead Generation & CRM](https://smartclick.co.zw/services/lead-generation-crm/): Lead-gen systems, call tracking and CRM setup (such as Pipedrive or HubSpot) that connect marketing to sales.
+- [Email & WhatsApp Marketing](https://smartclick.co.zw/services/email-whatsapp-marketing/): Newsletters, lead nurturing and automated WhatsApp and email flows that follow up every lead for you.
+- [Lead Generation & CRM](https://smartclick.co.zw/services/lead-generation-crm/): Lead-gen systems, call tracking and CRM set-up (such as Pipedrive or HubSpot) that connect marketing to sales.
 - [Conversion Rate Optimisation](https://smartclick.co.zw/services/cro/): UX audits and A/B testing that turn more of your existing visitors into customers.
 - [Content Marketing & Link Building](https://smartclick.co.zw/services/content-marketing/): Articles, guides, video scripts and digital PR that build authority with Google, AI and your buyers.
 - [Hosting, Maintenance & Speed](https://smartclick.co.zw/services/hosting-maintenance/): Secure hosting, backups, updates and speed optimisation to keep your website fast, safe and online.
@@ -27,7 +27,7 @@
 - [YouTube Ads](https://smartclick.co.zw/services/paid-ads/youtube-ads/): Skippable, Shorts, in-feed and bumper ads on YouTube, scripted and targeted for Zimbabwe or the diaspora, and judged on enquiries, not just views.
 - [Programmatic & Display Ads](https://smartclick.co.zw/services/paid-ads/programmatic-display/): Display banners and retargeting through Google's Display Network, with specialist programmatic platforms arranged case by case.
 - [Facebook & Instagram Ads](https://smartclick.co.zw/services/paid-ads/meta-ads/): Facebook, Instagram, Messenger and Threads campaigns built in Meta Ads Manager and measured on the enquiries and sales they bring in.
-- [WhatsApp Ads](https://smartclick.co.zw/services/paid-ads/whatsapp-ads/): Click-to-WhatsApp ads on Facebook and Instagram, plus WhatsApp Status ads, with fast replies and CRM follow-up that turn chats into sales.
+- [WhatsApp Ads](https://smartclick.co.zw/services/paid-ads/whatsapp-ads/): Click-to-WhatsApp ads on Facebook and Instagram, plus WhatsApp Status ads where Meta offers them, with fast replies and CRM follow-up that turn chats into sales.
 - [TikTok Ads](https://smartclick.co.zw/services/paid-ads/tiktok-ads/): TikTok video ads for diaspora and international campaigns, run through an ad account registered in a supported country such as South Africa or the UK.
 - [LinkedIn Ads](https://smartclick.co.zw/services/paid-ads/linkedin-ads/): LinkedIn Sponsored Content, Conversation Ads and Lead Gen Forms for B2B, recruitment, education and professional services.
 
@@ -35,9 +35,9 @@
 
 - [What is AEO? Answer engine optimisation explained for Zimbabwean businesses](https://smartclick.co.zw/insights/what-is-aeo/): What AEO is, how ChatGPT, Gemini, Copilot, Perplexity and Google's AI choose their sources, and a practical checklist for Zimbabwean businesses.
 - [ChatGPT ads explained: what Zimbabwean businesses need to know](https://smartclick.co.zw/insights/chatgpt-ads-explained/): What ChatGPT ads are, who can buy them as of November 2026, where Zimbabwe stands, and how to get ready with tracking, landing pages and AEO.
-- [GA4 setup checklist for Zimbabwean business websites](https://smartclick.co.zw/insights/google-analytics-4-checklist/): A practical GA4 setup checklist for Zimbabwean businesses: currency, key events, WhatsApp and call tracking, consent, AI referrals and monthly reviews.
+- [GA4 set-up checklist for Zimbabwean business websites](https://smartclick.co.zw/insights/google-analytics-4-checklist/): A practical GA4 set-up checklist for Zimbabwean businesses: currency, key events, WhatsApp and call tracking, consent, AI referrals and monthly reviews.
 - [Click-to-WhatsApp ads: a practical guide for Zimbabwean businesses](https://smartclick.co.zw/insights/click-to-whatsapp-ads-guide/): How to run Click-to-WhatsApp ads in Zimbabwe: app or Platform, linking accounts, objectives, pre-filled messages, fast replies, tracking and costs.
-- [How to get your Zimbabwean business on Google Maps and rank locally](https://smartclick.co.zw/insights/local-seo-zimbabwe-google-maps/): A step-by-step guide to getting your Zimbabwean business onto Google Maps: profile setup, verification, categories, reviews, listings and tracking.
+- [How to get your Zimbabwean business on Google Maps and rank locally](https://smartclick.co.zw/insights/local-seo-zimbabwe-google-maps/): A step-by-step guide to getting your Zimbabwean business onto Google Maps: profile set-up, verification, categories, reviews, listings and tracking.
 - [Marketing to Zimbabweans abroad: a practical guide for local businesses](https://smartclick.co.zw/insights/marketing-to-zimbabwean-diaspora/): How Zimbabwean businesses can sell to Zimbabweans abroad: what they buy, building trust, clear payment, WhatsApp sales, ad targeting and timing.
 
 ## Areas we serve

@@ -12,7 +12,7 @@
   "h1": "Google Ads that turn searches into <span class=\"hl\">calls and WhatsApp chats</span>",
   "intro": "Google Ads puts your business in front of people at the moment they search for what you sell, whether they're in Harare, Bulawayo or a diaspora market abroad. It suits businesses that people actively search for, from clinics, solar installers and car hire firms to schools and property developers. We build and manage Search, Performance Max, Demand Gen, Display and Shopping campaigns, with tracking that shows which keywords and ads lead to calls, WhatsApp chats and enquiries.",
   "problems": [
-   "Your ads show for searches that have little to do with what you sell, and you pay for every one of those clicks.",
+   "Your ads show for searches that have little to do with what you sell, and each of those wasted clicks costs you money.",
    "A Performance Max campaign is spending your budget, and nobody has explained where your ads appear or what they bring in.",
    "Google reports plenty of conversions, but your team can't match them to real calls, chats or sales.",
    "You only serve Harare or a few towns, yet your ads reach people across the country who can't buy from you."
@@ -177,6 +177,7 @@
   "group": "Search and AI assistants",
   "icon": "bot",
   "badge": "Diaspora",
+  "area_served": ["United Kingdom", "United States", "Australia"],
   "note": "For diaspora campaigns run through a business registered in a country where OpenAI sells ChatGPT ads. As of November 2026, they are not available to Zimbabwe-registered businesses or for reaching people in Zimbabwe.",
   "short": "Ads inside ChatGPT for diaspora brands registered where OpenAI sells them, plus straight advice and preparation if you can't advertise there.",
   "title": "ChatGPT Ads for Zimbabwean Diaspora Brands",
@@ -334,7 +335,7 @@
    ],
    [
     "How do we know if YouTube ads are working?",
-    "Views, view rate, cost per view and reach tell part of the story, but we judge success on the visits, calls, WhatsApp chats and enquiries that follow. Conversions are tracked in Google Ads and GA4, and YouTube sits beside your other channels in one monthly report."
+    "Views, view rate, cost per view and reach tell part of the story, but we judge success on the visits, calls, WhatsApp chats and enquiries that follow. Conversions are tracked in Google Ads and as key events in GA4, and YouTube sits beside your other channels in one monthly report."
    ]
   ],
   "related": [
@@ -497,7 +498,7 @@
     "Yes. Businesses based in Zimbabwe can run Meta ads aimed at customers at home and abroad. Which payment methods you can use depends on your country and currency, so we check them with you when we set up or review your ad account."
    ],
    [
-    "Is boosting a post the same as running a campaign?",
+    "Isn't boosting a post enough?",
     "Not quite. Boosting is a quick way to show an existing post to more people. A campaign built in Ads Manager lets us choose the objective, audiences and placements, run several ads against each other and track what each one brings in. Boosted posts can play a small part, but rarely the whole plan."
    ],
    [
@@ -522,8 +523,8 @@
   "icon": "message",
   "badge": "",
   "note": "WhatsApp Status ads are not offered in every country, so we confirm availability for your audience in Meta Ads Manager before launch.",
-  "short": "Click-to-WhatsApp ads on Facebook and Instagram, plus WhatsApp Status ads, with fast replies and CRM follow-up that turn chats into sales.",
-  "title": "WhatsApp Ads in Zimbabwe | Click-to-WhatsApp",
+  "short": "Click-to-WhatsApp ads on Facebook and Instagram, plus WhatsApp Status ads where Meta offers them, with fast replies and CRM follow-up that turn chats into sales.",
+  "title": "WhatsApp Ads Management in Zimbabwe",
   "description": "Click-to-WhatsApp and WhatsApp Status ads for Zimbabwean businesses, with chat scripts, fast follow-up, CRM tracking and reports on cost per sale.",
   "h1": "WhatsApp ads that start <span class=\"hl\">real sales conversations</span>",
   "intro": "Many Zimbabwean buyers would rather ask on WhatsApp than fill in a form, especially before paying for solar systems, school places, stands, cars or grocery deliveries for family. Click-to-WhatsApp ads on Facebook and Instagram open a chat with your business in one tap, and Status ads appear between the updates people watch on WhatsApp itself. We run both, and set up the replies, follow-up and tracking that turn those chats into paying customers.",
@@ -540,7 +541,7 @@
    ],
    [
     "WhatsApp Status ads",
-    "Image, video or carousel ads shown between people's Status updates, opening a chat or your website. Status can only be bought together with the Instagram Stories placement, in the same ad set. It isn't open to Meta's special ad categories (financial products, employment, housing, and social issues, elections or politics), and Meta also keeps some health and pharmaceutical ads out of Status."
+    "Image, video or carousel ads shown between people's Status updates, opening a chat or your website. Status can only be bought together with the Instagram Stories placement, in the same ad set. It isn't open to Meta's special ad categories: employment, housing, financial products and services, and ads about social issues, elections or politics. Meta also keeps some health and pharmaceutical ads out of Status."
    ],
    [
     "A better first message",
@@ -607,6 +608,7 @@
   "group": "Social and messaging",
   "icon": "music",
   "badge": "Diaspora",
+  "area_served": ["South Africa", "United Kingdom", "United States", "Australia"],
   "note": "TikTok does not offer self-serve ad accounts to Zimbabwe-registered businesses, and we do not currently offer TikTok ads aimed at Zimbabwe. We run diaspora campaigns through accounts in supported countries.",
   "short": "TikTok video ads for diaspora and international campaigns, run through an ad account registered in a supported country such as South Africa or the UK.",
   "title": "TikTok Ads for Diaspora Campaigns",
@@ -614,7 +616,7 @@
   "h1": "TikTok ads for <span class=\"hl\">diaspora and international</span> campaigns",
   "intro": "TikTok ads are full-screen, sound-on videos that play between the posts people scroll through, so they need to look and sound like TikTok, not like a TV advert. TikTok doesn't offer self-serve ad accounts to businesses registered in Zimbabwe, so we run TikTok campaigns for diaspora and international brands, through an ad account your business holds in a supported country such as South Africa, the UK, the US or Australia.",
   "problems": [
-   "You tried to open a TikTok ad account for your Zimbabwean business and found you couldn't.",
+   "You tried to open a TikTok ad account for your Zimbabwean business, found you couldn't, and nobody explained what you can do instead.",
    "Your business abroad serves Zimbabwean customers, but your TikTok posts rarely reach the people most likely to buy.",
    "Your polished adverts look out of place among casual phone videos, so people swipe straight past.",
    "You get plenty of views, but can't link any of them to an order, a booking or a sign-up."
@@ -752,7 +754,7 @@
   "faqs": [
    [
     "Can Zimbabwean businesses advertise on LinkedIn, and can ads target Zimbabwe?",
-    "LinkedIn ads are bought through Campaign Manager, but we don't assume every business and market is supported. Before you commit budget, we check in your own account that your billing details are accepted, that your target locations, such as Zimbabwe, South Africa or the UK, can be selected, and that the forecast audience is large enough to run. Your ad spend is paid directly to LinkedIn."
+    "LinkedIn ads are bought through Campaign Manager, but we don't assume every business and market is supported. Before you commit budget, we use your own account to check three things: that your billing details are accepted, that your target locations (such as Zimbabwe, South Africa or the UK) can be selected, and that the forecast audience is large enough to run. Your ad spend is paid directly to LinkedIn."
    ],
    [
     "Which businesses is LinkedIn right for?",
