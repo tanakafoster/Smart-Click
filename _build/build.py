@@ -698,8 +698,10 @@ def platforms_section():
         if g not in seen:
             seen.append(g)
     for g in seen:
-        cards = "".join(card_for(p["slug"], badge=p.get("badge", "")) for p in C.AD_PLATFORMS if p.get("group", "Other platforms") == g)
-        groups.append('<h3 class="group-title">%s</h3><div class="grid grid-3">%s</div>' % (g, cards))
+        members = [p for p in C.AD_PLATFORMS if p.get("group", "Other platforms") == g]
+        cards = "".join(card_for(p["slug"], badge=p.get("badge", "")) for p in members)
+        cols = "grid-2" if len(members) in (2, 4) else "grid-3"  # avoid half-empty rows and a lone last card
+        groups.append('<h3 class="group-title">%s</h3><div class="grid %s">%s</div>' % (g, cols, cards))
     return T("""
 <section class="section bg-soft" id="platforms">
   <div class="container">
@@ -1122,7 +1124,7 @@ def build_contact():
   <div>
     <span class="eyebrow">Get in touch</span>
     <h2>Speak to a specialist</h2>
-    <div class="contact-card"><div class="icon">{{i_phone}}</div><div><h3>Call us</h3><p><a href="tel:{{tel}}">{{phone}}</a> · {{intl}}</p></div></div>
+    <div class="contact-card"><div class="icon">{{i_phone}}</div><div><h3>Call us</h3><p><a href="tel:{{tel}}">{{phone}}</a> · <span style="white-space:nowrap">{{intl}}</span></p></div></div>
     <div class="contact-card"><div class="icon icon-wa">{{i_msg}}</div><div><h3>WhatsApp</h3><p><a href="{{wa}}" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p></div></div>
     <div class="contact-card"><div class="icon">{{i_mail}}</div><div><h3>Email</h3><p><a href="mailto:{{email}}">{{email}}</a></p></div></div>
     <div class="contact-card"><div class="icon">{{i_clock}}</div><div><h3>Hours</h3><p>{{hours_long}}</p></div></div>

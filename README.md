@@ -63,4 +63,17 @@ Mark `generate_lead` and `whatsapp_click` as key events in GA4. If you expect vi
 
 ## Hosting
 
-It's a static site: upload the repository contents (everything except `_build/` and `README.md` is needed at runtime) to any web host, such as cPanel, Netlify, Cloudflare Pages or GitHub Pages. No server or database is required. Point `smartclick.co.zw` at the host and make sure `404.html` is set as the error page. The contact form opens WhatsApp (or the visitor's email app) with their details filled in, so enquiries arrive on 0771 269 979 or at info@smartclick.co.zw.
+The site is published to **GitHub Pages** by `.github/workflows/deploy-pages.yml` every time `main` changes. The workflow rebuilds the pages from `_build/` first, so an edit to `content.py` goes live even if the HTML wasn't rebuilt. You can also run it by hand from the Actions tab ("Deploy website", then "Run workflow").
+
+One-time setup:
+
+1. In the repository, open **Settings > Pages** and set **Source** to **GitHub Actions**.
+2. Under **Custom domain**, enter `smartclick.co.zw` and save.
+3. At your domain registrar, add these DNS records:
+   - `A` records for `smartclick.co.zw` pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`
+   - a `CNAME` record for `www` pointing to `tanakafoster.github.io`
+4. Once the domain check passes (DNS can take up to a day), tick **Enforce HTTPS**.
+
+Until step 1 is done, the workflow skips publishing and leaves a warning instead of failing.
+
+It's a plain static site, so any other host works too (cPanel, Netlify, Cloudflare Pages): upload everything except `_build/`, `.github/` and `README.md`, and set `404.html` as the error page. No server or database is needed. The contact form opens WhatsApp (or the visitor's email app) with their details filled in, so enquiries arrive on 0771 269 979 or at info@smartclick.co.zw.
