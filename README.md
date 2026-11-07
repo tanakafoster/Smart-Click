@@ -63,17 +63,19 @@ Mark `generate_lead` and `whatsapp_click` as key events in GA4. If you expect vi
 
 ## Hosting
 
-The site is published to **GitHub Pages** by `.github/workflows/deploy-pages.yml` every time `main` changes. The workflow rebuilds the pages from `_build/` first, so an edit to `content.py` goes live even if the HTML wasn't rebuilt. You can also run it by hand from the Actions tab ("Deploy website", then "Run workflow").
+The site is hosted on **Vercel**, which is connected to this GitHub repository:
 
-One-time setup:
+- Every push to `main` publishes the live site.
+- Every pull request gets its own preview link, posted on the pull request by the Vercel bot.
+- Vercel serves the committed HTML as it is, with no build step. After editing anything in `_build/`, run `python3 _build/build.py` and commit the regenerated pages.
+- `.vercelignore` keeps `_build/` and this README off the live site.
+- `404.html` is used automatically for missing pages.
 
-1. In the repository, open **Settings > Pages** and set **Source** to **GitHub Actions**.
-2. Under **Custom domain**, enter `smartclick.co.zw` and save.
-3. At your domain registrar, add these DNS records:
-   - `A` records for `smartclick.co.zw` pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`
-   - a `CNAME` record for `www` pointing to `tanakafoster.github.io`
-4. Once the domain check passes (DNS can take up to a day), tick **Enforce HTTPS**.
+To use `smartclick.co.zw`:
 
-Until step 1 is done, the workflow skips publishing and leaves a warning instead of failing.
+1. Add the domain in Vercel under the project's **Settings > Domains**.
+2. Wherever you manage the domain, add the DNS records Vercel shows you. Leave the email (MX) records as they are.
 
-It's a plain static site, so any other host works too (cPanel, Netlify, Cloudflare Pages): upload everything except `_build/`, `.github/` and `README.md`, and set `404.html` as the error page. No server or database is needed. The contact form opens WhatsApp (or the visitor's email app) with their details filled in, so enquiries arrive on 0771 269 979 or at info@smartclick.co.zw.
+HTTPS is set up automatically once the records are in place.
+
+It's a plain static site, so any other host works too (cPanel, Netlify, Cloudflare Pages, GitHub Pages): upload everything except `_build/` and `README.md`, and set `404.html` as the error page. No server or database is needed. The contact form opens WhatsApp (or the visitor's email app) with their details filled in, so enquiries arrive on 0771 269 979 or at info@smartclick.co.zw.
