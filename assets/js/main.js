@@ -2,7 +2,7 @@
 (function () {
   var WA_NUMBER = "263771269979";
   var EMAIL = "info@smartclick.co.zw";
-  var MOBILE = "(max-width: 1020px)";
+  var MOBILE = "(max-width: 1100px)";
 
   function track(name, params) {
     if (typeof window.gtag === "function") window.gtag("event", name, params || {});
@@ -12,10 +12,11 @@
   var header = document.querySelector(".site-header");
   var toggle = document.querySelector(".menu-toggle");
   if (toggle && header) {
-    // Fit the open menu to the screen below the header (the top bar can push it past the bottom edge)
+    // Fit the open menu to the screen below the floating nav bar (the top bar can push it down)
     var links = header.querySelector(".nav-links");
+    var bar = header.querySelector(".nav");
     var fitMenu = function () {
-      if (links && header.classList.contains("nav-open")) links.style.maxHeight = (window.innerHeight - header.getBoundingClientRect().bottom) + "px";
+      if (links && bar && header.classList.contains("nav-open")) links.style.maxHeight = Math.max(200, window.innerHeight - bar.getBoundingClientRect().bottom - 24) + "px";
     };
     toggle.addEventListener("click", function () {
       var open = header.classList.toggle("nav-open");

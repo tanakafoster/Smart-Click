@@ -103,8 +103,12 @@ WA_SVG = ('<svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path
 LOGO_MARK = ('<rect width="48" height="48" rx="13" fill="url(#{id})"/>'
              '<path d="M17 13l17 9.5-7.4 1.7 4.6 8.4-3.6 2-4.6-8.4-5.3 5.2z" fill="#fff"/>'
              '<path d="M12 12.5l-2.6-2.6M17 9.5V6M12 18H8.4" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>')
-LOGO_GRAD = ('<linearGradient id="{id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2fb3aa"/>'
-             '<stop offset="1" stop-color="#0d4f5c"/></linearGradient>')
+LOGO_GRAD = ('<linearGradient id="{id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7db8e4"/>'
+             '<stop offset="1" stop-color="#1c3f7a"/></linearGradient>')
+
+# Arrow used inside the circle on primary buttons (drawn in CSS) and a check-in-a-circle for trust points
+CHECK_CIRCLE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" '
+                'stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg>')
 
 
 def logo(gid="lg"):
@@ -172,11 +176,11 @@ def header(active):
     return T("""
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="topbar"><div class="container">
-  <span class="tb-hide">Harare-based digital marketing agency serving all of Zimbabwe · <strong>{{hours}}</strong></span>
-  <span><a href="tel:{{tel}}">{{phone}}</a><span class="tb-hide"> · <a href="mailto:{{email}}">{{email}}</a></span></span>
+  <span class="tb-hide tb-tag">Harare-based digital marketing agency serving all of Zimbabwe · <strong>{{hours}}</strong></span>
+  <span class="tb-hello">Say hello: <a href="tel:{{tel}}">{{phone}}</a><span class="tb-hide"> · <a href="mailto:{{email}}">{{email}}</a></span></span>
 </div></div>
 <header class="site-header">
-  <div class="container nav">
+  <div class="container"><div class="nav">
     {{logo}}
     <nav aria-label="Main">
       <ul class="nav-links">
@@ -189,11 +193,10 @@ def header(active):
       </ul>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-outline" href="tel:{{tel}}">{{phone}}</a>
-      <a class="btn btn-primary" href="{r}contact/index.html">Free strategy session</a>
+      <a class="btn btn-primary" href="{r}contact/index.html">Let's talk</a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
-  </div>
+  </div></div>
 </header>""", hours=C.HOURS, tel=C.PHONE_TEL, phone=C.PHONE_LOCAL, email=C.EMAIL, logo=logo(), services=services,
              ads_cls="has-mega" if ads_menu else "", ads_menu=ads_menu,
              c_services=cur("services"), c_ads=cur("ads"), c_portfolio=cur("portfolio"), c_insights=cur("insights"),
@@ -243,7 +246,7 @@ def footer():
     </div>
   </div>
 </footer>
-<a class="wa-float" href="{{wa}}" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">{{wa_svg}}</a>
+<a class="wa-float" href="{{wa}}" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><span class="wa-label">Chat on WhatsApp</span><span class="wa-ic">{{wa_svg}}</span></a>
 """, logo=logo("lgf"), tel=C.PHONE_TEL, phone=C.PHONE_LOCAL, email=C.EMAIL, hours=C.HOURS,
              core="".join(li(s) for s in core), more="".join(li(s) for s in more), ads_col=ads_col,
              brand=C.BRAND, wa=wa_link(), wa_svg=WA_SVG)
@@ -322,11 +325,11 @@ def page(path, title, description, body, active="", schemas=None, root=None, ind
 <meta property="og:url" content="{{canonical}}">
 <meta property="og:image" content="{{site}}/assets/img/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0b2530">
+<meta name="theme-color" content="#0d1a36">
 <link rel="icon" href="{r}assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lexend:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{r}assets/css/styles.css">
 {{ga}}
 {{ld}}
@@ -456,7 +459,7 @@ def mockup(p, size=""):
     <div class="mock-hero"><strong>{{headline}}</strong><span class="ln"></span><span class="ln short"></span><em>{{cta}}</em></div>
     <div class="mock-cards"><span></span><span></span><span></span></div>
   </div>
-</div>""", size=size, c1=m.get("color1", "#0b2530"), c2=m.get("color2", "#4fbfb8"), label=esc(m.get("label", p["sector"])),
+</div>""", size=size, c1=m.get("color1", "#0d1a36"), c2=m.get("color2", "#6cabdd"), label=esc(m.get("label", p["sector"])),
              headline=esc(m.get("headline", p["title"])), cta=esc(m.get("cta", "Get a quote")))
 
 
@@ -521,31 +524,54 @@ def build_home():
   </div>
 </section>""", cards="".join(article_card(a) for a in C.ARTICLES[:3]))
 
+    # Hero: optional real Google rating (only when the owner has entered one) and the right-hand visual
+    reviews = ""
+    gr = C.GOOGLE_REVIEWS or {}
+    if gr.get("rating") and gr.get("count"):
+        inner = ('<span class="hr-g">Google</span><span class="hr-stars" aria-hidden="true">★★★★★</span>'
+                 '<b>%s</b><span class="hr-sep" aria-hidden="true"></span><span>from %s reviews</span>'
+                 % (esc(gr["rating"]), esc(gr["count"])))
+        reviews = ('<a class="hero-reviews" href="%s" target="_blank" rel="noopener">%s</a>' % (esc(gr["url"]), inner)
+                   if gr.get("url") else '<p class="hero-reviews">%s</p>' % inner)
+    badge = T("""<div class="hv-badge" aria-hidden="true">
+        <svg class="hv-ring" viewBox="0 0 200 200"><defs><path id="hvring" d="M100 100m-75 0a75 75 0 1 1 150 0a75 75 0 1 1-150 0"/></defs><text><textPath href="#hvring">CALL OR WHATSAPP · ANY TIME · HARARE · </textPath></text></svg>
+        <span class="hv-badge-in"><small>Open</small><b>24/7</b></span>
+      </div>""")
+    cards = T("""<div class="hv-card hv-card-map" aria-hidden="true"><span class="hv-ic hv-pin">{{pin}}</span><span class="hv-tx"><b>Your Business</b><small>Found on Google Maps · Harare</small></span></div>
+      <div class="hv-card hv-card-chart" aria-hidden="true"><svg class="hv-spark" viewBox="0 0 120 48" fill="none"><path d="M2 42 L22 36 L40 38 L58 26 L76 28 L94 14 L118 6 L118 48 L2 48 Z" fill="rgba(108,171,221,.22)"/><path d="M2 42 L22 36 L40 38 L58 26 L76 28 L94 14 L118 6" stroke="#2563a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="118" cy="6" r="4" fill="#2563a6"/></svg><span class="hv-tx"><b>Every lead tracked</b><small>Google Analytics 4</small></span></div>""",
+              pin=icon("pin"))
+    if C.HERO_PHOTO:
+        figure = '<img class="hv-photo" src="{r}%s" alt="%s" width="600" height="760">' % (esc(C.HERO_PHOTO), esc(C.HERO_PHOTO_ALT))
+    else:
+        figure = T("""<div class="hv-phone" aria-hidden="true"><div class="hv-screen">
+        <div class="hv-status"><span>9:41</span><span class="hv-batt"></span></div>
+        <div class="hv-head"><b>New enquiries</b><span>Today</span></div>
+        <ul class="hv-list">
+          <li><span class="hv-ic hv-wa">{{wa}}</span><span class="hv-tx"><b>WhatsApp</b><em>“Do you deliver to Gweru?”</em><small>From your Facebook ad</small></span><span class="hv-t">now</span></li>
+          <li><span class="hv-ic hv-call">{{phone}}</span><span class="hv-tx"><b>Phone call</b><em>Found you on Google Maps</em></span><span class="hv-t">4m</span></li>
+          <li><span class="hv-ic hv-web">{{search}}</span><span class="hv-tx"><b>Website form</b><em>“Quote for 5 kVA solar, please”</em></span><span class="hv-t">12m</span></li>
+          <li><span class="hv-ic hv-ai">{{spark}}</span><span class="hv-tx"><b>AI search</b><em>Found you through AI search</em></span><span class="hv-t">25m</span></li>
+        </ul>
+        <div class="hv-chart"><div class="hv-chart-top"><b>Enquiries</b><span>This week</span></div><div class="hv-bars"><i style="height:30%"></i><i style="height:44%"></i><i style="height:38%"></i><i style="height:58%"></i><i style="height:66%"></i><i style="height:80%"></i><i style="height:100%"></i></div></div>
+      </div></div>""", wa=WA_SVG, phone=icon("phone"), search=icon("search"), spark=icon("sparkles"))
+    visual = '<div class="hv-disc" aria-hidden="true"></div>\n      ' + badge + "\n      " + figure + "\n      " + cards
+
     body = T("""
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow">Digital marketing agency · Harare, Zimbabwe · Open 24/7</span>
-      <h1>Get found. Get chosen. <span class="hl">Grow across Zimbabwe.</span></h1>
-      <p class="lead">Smart Click Media helps Zimbabwean businesses win more customers through SEO, AI search (AEO), paid ads on the major platforms, Google Analytics, social media and websites built to sell. Based in Harare, serving every province.</p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="{r}contact/index.html">Get my free strategy session</a>
-        <a class="btn btn-outline" href="tel:{{tel}}">Call {{phone}}</a>
-      </div>
-      <div class="hero-badges">
-        <span class="chip"><b>●</b> SEO &amp; AEO</span>
-        <span class="chip"><b>●</b> Google, Meta, YouTube &amp; LinkedIn ads</span>
-        <span class="chip"><b>●</b> Google Analytics</span>
-        <span class="chip"><b>●</b> Websites &amp; e-commerce</span>
-      </div>
+<section class="hero hero-home">
+  <div class="hero-circle" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-copy">
+      <h1><span class="ln">Smarter <span class="hl">Clicks.</span></span> <span class="ln">More <span class="hl">Leads.</span></span> <span class="ln">Real <span class="hl">Results.</span></span></h1>
+      <p class="hero-sub">Digital marketing agency in Harare, helping businesses across Zimbabwe get found online and win more <span class="hl">customers.</span></p>
+      <div class="hero-cta"><a class="btn btn-primary btn-lg" href="{r}contact/index.html">Get a free strategy session</a></div>
+      <ul class="hero-trust">
+        <li>{{check}}Open 24/7</li>
+        <li>{{check}}Based in Harare</li>
+        <li>{{check}}Results you can measure</li>
+      </ul>
+      {{reviews}}
     </div>
-    <div class="hero-card" aria-hidden="true">
-      <div class="hc-top"><span class="dots"><i></i><i></i><i></i></span><span>Illustration: where buyers find you</span></div>
-      <div class="hc-search">{{search}} solar installers in Harare</div>
-      <div class="hc-result"><span class="tag">Search result</span><b>Your Business · Harare, Zimbabwe</b><small>yourbusiness.co.zw</small><br>Call or WhatsApp today for a free quote…</div>
-      <div class="hc-ai"><strong>AI answer:</strong> For solar installers in Harare, one option to consider is <strong>Your Business</strong>, which has clear prices and recent reviews…</div>
-      <div class="hc-bars"><i style="height:30%"></i><i style="height:42%"></i><i style="height:38%"></i><i style="height:55%"></i><i style="height:63%"></i><i style="height:72%"></i><i style="height:86%"></i><i style="height:100%"></i></div>
-    </div>
+    <div class="hero-visual">{{visual}}</div>
   </div>
 </section>
 
@@ -657,7 +683,7 @@ def build_home():
   </div>
 </section>
 {{cta}}
-""", tel=C.PHONE_TEL, phone=C.PHONE_LOCAL, search=icon("search"), marquee=marquee,
+""", check=CHECK_CIRCLE, reviews=reviews, visual=visual, marquee=marquee,
              core="".join(card_for(s["slug"]) for s in core), spark=icon("sparkles"), nrest=len(rest),
              ads_grid=ads_grid, questions="".join("<li>%s%s</li>" % (icon("message"), q) for q in AI_QUESTIONS),
              principles="".join('<div class="card card-dark reveal"><div class="icon">%s</div><h3>%s</h3><p>%s</p></div>'
