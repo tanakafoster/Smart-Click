@@ -246,7 +246,7 @@ def footer():
     </div>
   </div>
 </footer>
-<a class="wa-float" href="{{wa}}" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><span class="wa-label">Chat on WhatsApp</span><span class="wa-ic">{{wa_svg}}</span></a>
+<a class="wa-float" href="{{wa}}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><span class="wa-label">Chat on WhatsApp</span><span class="wa-ic">{{wa_svg}}</span></a>
 """, logo=logo("lgf"), tel=C.PHONE_TEL, phone=C.PHONE_LOCAL, email=C.EMAIL, hours=C.HOURS,
              core="".join(li(s) for s in core), more="".join(li(s) for s in more), ads_col=ads_col,
              brand=C.BRAND, wa=wa_link(), wa_svg=WA_SVG)
@@ -528,9 +528,13 @@ def build_home():
     reviews = ""
     gr = C.GOOGLE_REVIEWS or {}
     if gr.get("rating") and gr.get("count"):
-        inner = ('<span class="hr-g">Google</span><span class="hr-stars" aria-hidden="true">★★★★★</span>'
+        try:  # colour in only the share of the five stars that the real rating earns (4.2 shows 4.2 gold stars)
+            fill = min(max(float(str(gr["rating"]).replace(",", ".")), 0), 5) * 20
+        except ValueError:
+            raise SystemExit('GOOGLE_REVIEWS "rating" must be a number such as "4.8"')
+        inner = ('<span class="hr-g">Google</span><span class="hr-stars" aria-hidden="true">★★★★★<span style="width:%.1f%%">★★★★★</span></span>'
                  '<b>%s</b><span class="hr-sep" aria-hidden="true"></span><span>from %s reviews</span>'
-                 % (esc(gr["rating"]), esc(gr["count"])))
+                 % (fill, esc(gr["rating"]), esc(gr["count"])))
         reviews = ('<a class="hero-reviews" href="%s" target="_blank" rel="noopener">%s</a>' % (esc(gr["url"]), inner)
                    if gr.get("url") else '<p class="hero-reviews">%s</p>' % inner)
     badge = T("""<div class="hv-badge" aria-hidden="true">
