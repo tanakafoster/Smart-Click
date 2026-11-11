@@ -2,7 +2,7 @@
 (function () {
   var WA_NUMBER = "263771269979";
   var EMAIL = "info@smartclick.co.zw";
-  var MOBILE = "(max-width: 1020px)";
+  var MOBILE = "(max-width: 1100px)";
 
   function track(name, params) {
     if (typeof window.gtag === "function") window.gtag("event", name, params || {});
@@ -12,16 +12,27 @@
   var header = document.querySelector(".site-header");
   var toggle = document.querySelector(".menu-toggle");
   if (toggle && header) {
-    // Fit the open menu to the screen below the header (the top bar can push it past the bottom edge)
+    // Fit the open menu to the screen below the floating nav bar (the top bar can push it down)
     var links = header.querySelector(".nav-links");
+    var bar = header.querySelector(".nav");
     var fitMenu = function () {
-      if (links && header.classList.contains("nav-open")) links.style.maxHeight = (window.innerHeight - header.getBoundingClientRect().bottom) + "px";
+      if (links && bar && header.classList.contains("nav-open")) links.style.maxHeight = Math.max(200, window.innerHeight - bar.getBoundingClientRect().bottom - 24) + "px";
     };
-    toggle.addEventListener("click", function () {
+    toggle.addEventListener("click", function (e) {
       var open = header.classList.toggle("nav-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       fitMenu();
+      // The menu links come before this button in the page, so keyboard users (no mouse click) go to the first one
+      if (open && !e.detail && links) links.querySelector("a").focus();
+    });
+    // Escape closes the menu and puts focus back on the button
+    header.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && header.classList.contains("nav-open")) { toggle.click(); toggle.focus(); }
+    });
+    // Tabbing out of the header closes the menu, so it never covers the next focused item on the page
+    header.addEventListener("focusout", function (e) {
+      if (header.classList.contains("nav-open") && e.relatedTarget && !header.contains(e.relatedTarget)) toggle.click();
     });
     window.addEventListener("resize", fitMenu);
   }
@@ -36,6 +47,21 @@
         }
       }
     });
+  });
+
+  // Escape hides an open dropdown on desktop without moving the pointer; it shows again on the next hover or focus
+  var megas = document.querySelectorAll(".has-mega");
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape" || window.matchMedia(MOBILE).matches) return;
+    megas.forEach(function (li) {
+      if (!li.matches(":hover, :focus-within")) return;
+      li.classList.add("mega-off");
+      if (li.contains(document.activeElement)) li.firstElementChild.focus();
+    });
+  });
+  megas.forEach(function (li) {
+    li.addEventListener("focusout", function (e) { if (!li.contains(e.relatedTarget)) li.classList.remove("mega-off"); });
+    li.addEventListener("mouseleave", function () { li.classList.remove("mega-off"); });
   });
 
   // Reveal on scroll (the html.js class is added in <head>, so content is visible without JavaScript)

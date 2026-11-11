@@ -16,6 +16,18 @@ SITE_URL = "https://smartclick.co.zw"
 # Google Analytics 4 measurement ID (looks like "G-XXXXXXXXXX"). Leave empty to switch tracking off.
 GA_MEASUREMENT_ID = ""
 
+# Google reviews row under the home page headline. Leave it empty until you have real Google reviews,
+# and only ever enter your real rating and review count, e.g.
+# GOOGLE_REVIEWS = {"rating": "4.9", "count": "38", "url": "https://g.page/r/your-review-link"}
+GOOGLE_REVIEWS = {}
+
+# Optional photo for the home page hero, such as the owner or a team member (with their permission).
+# A cut-out PNG with a transparent background looks best. Put the file in assets/img/ and set, e.g.
+# HERO_PHOTO = "assets/img/hero-photo.png" and HERO_PHOTO_ALT = "Tanaka, founder of Smart Click Media"
+# While it's empty, the hero shows an illustration of enquiries arriving on a phone.
+HERO_PHOTO = ""
+HERO_PHOTO_ALT = ""
+
 CITIES = ["Harare", "Bulawayo", "Chitungwiza", "Mutare", "Gweru", "Kwekwe", "Kadoma", "Masvingo",
           "Chinhoyi", "Marondera", "Bindura", "Victoria Falls", "Hwange", "Kariba", "Beitbridge",
           "Zvishavane", "Chegutu", "Rusape", "Gwanda", "Lupane"]
